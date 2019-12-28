@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://localhost:8080",
   "postinstall": "webpack ",
-  "homepage" : "http://ag-systems.github.io/Portfolio4"
+  "homepage": "http://ag-systems.github.io/maxadorable",
   "dependencies": {
     "express": "^4.17.1",
     "jquery": "^3.4.1",
@@ -21,7 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prod": "NODE_ENV=production node server.js"
+    "prod": "NODE_ENV=production node server.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
   }
 }
