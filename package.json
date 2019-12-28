@@ -23,7 +23,7 @@
     "eject": "react-scripts eject",
     "prod": "NODE_ENV=production node server.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -b master -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

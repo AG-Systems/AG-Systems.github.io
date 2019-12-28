@@ -84,7 +84,7 @@ class Navbar extends React.Component {
               <Link className="nav-link" to={"/about"}>About</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link"to="/public/Max_Chakhmatov_CS_resume.pdf" target="_blank" download>Resume</Link>
+              <Link className="nav-link"to="Max_Chakhmatov_CS_resume.pdf" target="_blank" download>Resume</Link>
             </li>
             {/*
             <li className="nav-item dropdown">
