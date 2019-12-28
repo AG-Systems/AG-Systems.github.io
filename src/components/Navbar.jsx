@@ -1,5 +1,9 @@
 import React from 'react';
 import $ from "jquery";
+import {
+  Link,
+} from "react-router-dom";
+
 
 class Navbar extends React.Component {
   constructor(props)
@@ -8,10 +12,18 @@ class Navbar extends React.Component {
     this.state = {
       y_position: 0
     };
+
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.listenToScroll)
+    window.addEventListener('scroll', this.listenToScroll);
+    /*
+    let element = document.getElementById("navbar");
+    if(this.props.location.pathname != "/")
+    {
+        element.style.background = 'transparent';
+    }
+    */
   }
 
   componentWillUnmount() {
@@ -34,11 +46,16 @@ class Navbar extends React.Component {
       element.style.backgroundColor = '#12171c';
       element.style.boxShadow = "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px";
        $("#navbar").removeClass("bg-transparent");
+       $("#navbar").removeClass("mxdrble-navbar");
     } else {
-      var element = document.getElementById("navbar");
-      element.style.backgroundColor = 'linear-gradient(180deg,rgba(18,23,28,.75),transparent);';
-      element.style.boxShadow = "";
-       $("#navbar").addClass("bg-transparent");
+      if(this.props.location.pathname != "/about")
+      {
+        var element = document.getElementById("navbar");
+        element.style.backgroundColor = 'linear-gradient(180deg,rgba(18,23,28,.75),transparent);';
+        element.style.boxShadow = "";
+         $("#navbar").addClass("bg-transparent");
+         $("#navbar").addClass("mxdrble-navbar");
+      }
     }
 
     this.setState({
@@ -46,27 +63,28 @@ class Navbar extends React.Component {
     })
   }
 
+
   render() {
     return (
       <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark bg-transparent mxdrble-navbar" id="navbar">
-        <a className="navbar-brand" href="#">Navbar</a>
+        <a className="navbar-brand" href="/">Max Chakhmatov</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon" />
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
 
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+            <li className={ this.props.location.pathname == "/" ? "nav-item active" :  "nav-item" }>
+              <Link className="nav-link" to={"/"} >Home</Link>
+            </li>
+            <li className={ this.props.location.pathname == "/projects" ? "nav-item active" :  "nav-item" }>
+              <Link className="nav-link" to={"/projects"}>Projects</Link>
+            </li>
+            <li className={ this.props.location.pathname == "/about" ? "nav-item active" :  "nav-item" }>
+              <Link className="nav-link" to={"/about"}>About</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Projects</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Resume</a>
+              <Link className="nav-link"to="/public/Max_Chakhmatov_CS_resume.pdf" target="_blank" download>Resume</Link>
             </li>
             {/*
             <li className="nav-item dropdown">

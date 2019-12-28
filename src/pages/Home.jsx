@@ -1,6 +1,8 @@
 import React from 'react';
-import radial from '../images/radial.png';
+import radial from '../images/radial_2.png';
 import FadeIn from 'react-fade-in';
+import $ from "jquery";
+import simpleParallax from 'simple-parallax-js';
 
 
 import math from "../images/math.png";
@@ -63,6 +65,23 @@ class Home extends React.Component {
           }
       ]
     }
+
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
+
+  }
+
+  componentDidMount()
+  {
+    let element = document.getElementById("navbar");
+    if(this.props.location.pathname != "/")
+    {
+        element.style.background = 'transparent';
+    } else {
+        element.style.background = 'linear-gradient(180deg,rgba(18,23,28,.75),transparent);';
+    }
+    element.style.boxShadow = "";
+     $("#navbar").addClass("bg-transparent");
+     $("#navbar").addClass("mxdrble-navbar");
   }
 
   render() {
@@ -90,29 +109,6 @@ class Home extends React.Component {
                 </FadeIn>
               </span>
               <img className="radial" src={radial} />
-          </div>
-          <div className="homepage-content">
-            <div style={{ width: "100%", height: "30px" }}></div>
-            <h1 style={{textAlign: 'center', fontSize: '45px', color: "white"}} className="text-white mt-5">My interests</h1>
-            <div style={{ width: "100%", height: "50px" }}></div>
-
-            <div className="card-deck" style={{ margin: "0 auto", paddingRight: "10px", paddingLeft: "10px" }}>
-
-              {this.state.interests.map(function(item, index)
-              {
-                  return(
-                      <div className="card text-white bg-dark mt-5" style={{ minWidth: '300px', width: "300px", maxWidth: "300px", margin: "0 auto",
-                          boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px"
-                       }} key={index} >
-                        <img src={ item.img } className="card-img-top" />
-                        <div className="card-body">
-                            <h5 className="card-title">{ item.title } </h5>
-                        </div>
-                      </div>
-                  );
-
-              })}
-            </div>
           </div>
       </div>
     );
