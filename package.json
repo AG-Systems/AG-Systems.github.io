@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:8080",
   "postinstall": "webpack ",
+  "homepage" : "http://ag-systems.github.io/Portfolio4"
   "dependencies": {
     "express": "^4.17.1",
     "jquery": "^3.4.1",
