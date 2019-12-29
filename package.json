@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://localhost:8080",
   "postinstall": "webpack ",
-  "homepage": "https://AG-Systems.github.io",
+  "homepage": "https://www.maxchakhmatov.com",
   "dependencies": {
     "express": "^4.17.1",
     "jquery": "^3.4.1",
