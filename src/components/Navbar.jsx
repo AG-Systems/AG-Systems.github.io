@@ -9,59 +9,9 @@ class Navbar extends React.Component {
   constructor(props)
   {
     super(props);
-    this.state = {
-      y_position: 0
-    };
 
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.listenToScroll);
-    /*
-    let element = document.getElementById("navbar");
-    if(this.props.location.pathname != "/")
-    {
-        element.style.background = 'transparent';
-    }
-    */
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.listenToScroll)
-  }
-
-  listenToScroll = () => {
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop
-
-    const height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight
-
-    const scrolled = winScroll / height
-
-    if(scrolled * 100 > 0.10)
-    {
-      var element = document.getElementById("navbar");
-      element.style.backgroundColor = '#12171c';
-      element.style.boxShadow = "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px";
-       $("#navbar").removeClass("bg-transparent");
-       $("#navbar").removeClass("mxdrble-navbar");
-    } else {
-      if(this.props.location.pathname != "/about")
-      {
-        var element = document.getElementById("navbar");
-        element.style.backgroundColor = 'linear-gradient(180deg,rgba(18,23,28,.75),transparent);';
-        element.style.boxShadow = "";
-         $("#navbar").addClass("bg-transparent");
-         $("#navbar").addClass("mxdrble-navbar");
-      }
-    }
-
-    this.setState({
-      y_position: scrolled * 100,
-    })
-  }
 
 
   render() {
