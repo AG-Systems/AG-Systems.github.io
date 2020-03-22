@@ -106,3 +106,116 @@ button.btn:focus {
 .dropdown-react {
   width: 50%;
 }
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+.btn {
+  text-decoration: none;
+}
+html {
+  overflow-y: scroll;
+}
+
+
+
+
+.react-expand-collapse__content {
+  position: relative;
+  overflow: hidden;
+}
+
+.react-expand-collapse__body {
+  display: inline;
+}
+
+/* expand-collapse button */
+.react-expand-collapse__button {
+  color: #22a7f0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-expand-collapse__button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to right, transparent 0, #fff 100%);
+}
+
+/* expanded state */
+.react-expand-collapse--expanded .react-expand-collapse__button {
+  padding-left: 5px;
+  position: relative;
+  bottom: auto;
+  right: auto;
+}
+
+.react-expand-collapse--expanded .react-expand-collapse__button:before {
+  content: none;
+}
+
+
+.bg {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: url("images/bg/bg_red.png");
+      background: -webkit-linear-gradient(top,rgba(24,28,37,0),rgba(24,28,37,.45)),url("images/bg/bg_red.png");
+      background: linear-gradient(180deg,rgba(24,28,37,0),rgba(24,28,37,.45)),url("images/bg/bg_red.png");
+      width: 100%;
+      position: relative;
+      box-shadow: 0 2px 2px rgba(0,0,0,.1);
+      padding: 8rem 2rem 1.1rem;
+      min-height: 100vh;
+      min-width: 100%;
+      height: auto;
+      border-radius: 0px !important;
+      z-index: -1;
+
+}
+
+.radial
+{
+    position: absolute;
+    align-self: center;
+    /* top: -70%; */
+    /* max-width: 100vw; */
+    -webkit-animation: rotation 550s linear infinite;
+    animation: rotation 550s linear infinite;
+    animation-direction: reverse;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 5;
+    background-size: cover;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}

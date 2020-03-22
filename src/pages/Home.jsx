@@ -5,6 +5,10 @@ import date from 'date-and-time';
 import { Link } from "react-router-dom";
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
+import ExpandCollapse from 'react-expand-collapse';
+
+
+
 
 const  DATE_DIFF = require("date-diff-js");
 
@@ -127,7 +131,6 @@ getExperience() {
           "date_ended": "April 2019",
           "img": require("../images/logos/chronoci.jpg"),
           "description": [
-            ""
           ],
           "tldr": "",
           "media": []
@@ -157,7 +160,6 @@ getExperience() {
           "date_ended": "Sep 2018",
           "img": require("../images/logos/sfshakes.png"),
           "description": [
-            ""
           ],
           "tldr": "",
           "media": []
@@ -205,7 +207,6 @@ getExperience() {
           "date_ended": "Dec 2016",
           "img": require("../images/logos/no_logo.png"),
           "description": [
-              ""
           ],
           "tldr": "",
           "media": []
@@ -228,8 +229,8 @@ getExperience() {
         },
         {
           "title": "Assistant",
-          "company": "ConfidentMindset",
-          "location": "Bay Area",
+          "company": "Swivl",
+          "location": "San Carlos",
           "date_started": "May 2016",
           "date_ended": "Jul 2016",
           "img": require("../images/logos/swivl.png"),
@@ -242,52 +243,6 @@ getExperience() {
       ];
 }
 
-renderEducation() {
-
-
-  const experience_list = this.getEducation();
-  let experience = experience_list.map(function(exp, index) {
-    let difference_months = "";
-    if(exp.date_ended == "Present")
-    {
-      difference_months = DATE_DIFF(exp.date_started, (new Date(new Date().getFullYear(),new Date().getMonth())).toString(), 'Month').output + 1;
-    } else {
-      difference_months = DATE_DIFF(exp.date_started, exp.date_ended, "Month").output + 1;
-    }
-
-    let description_content = [];
-    for (let value of experience_list[index].description) {
-      description_content.push(<span key={"description-" + exp.title + exp.company + index}> { value } </span>);
-      description_content.push(<br/>);
-    }
-    description_content.push(<br/>);
-
-    return (
-      <div className="media mt-5" key={index} >
-        <img src={ exp.img } className="mr-3" alt="..." />
-        <div className="media-body border-bottom d-none d-lg-block">
-          <h3 className="mt-0" style={{ fontSize: "1.2rem" }}>{ exp.title }</h3>
-          <p style={{ fontFamily: "Titillium Web" }}>
-              <span style={{ fontWeight: "400" }}>{ exp.school } </span>
-              <br/>
-              <span style={{ color: "rgba(0,0,0,.6)" }}> { exp.date_started } - { exp.date_ended } • { difference_months } Months </span>
-              <br/>
-              <span style={{ color: "rgba(0,0,0,.6)" }}> { exp.location } </span>
-          </p>
-          <span>
-            { description_content }
-          </span>
-        </div>
-        <div className="media-body d-lg-none">
-
-        </div>
-      </div>
-    );
-
-  });
-
-  return experience;
-}
 
 
   renderExperience() {
@@ -310,9 +265,11 @@ renderEducation() {
       }
       description_content.push(<br/>);
 
+
       return (
-        <div className="media mt-5" key={index} >
-          <img src={ exp.img } className="mr-3" alt="..." />
+        <div className="media mt-5" key={index}>
+          <img src={ exp.img } className="mr-3 d-none d-lg-block" alt="..." />
+          <img src={ exp.img } className="mr-3 d-lg-none" alt="..." height="45" width="45" />
           <div className="media-body border-bottom d-none d-lg-block">
             <h3 className="mt-0" style={{ fontSize: "1.2rem" }}>{ exp.title }</h3>
             <p style={{ fontFamily: "Titillium Web" }}>
@@ -326,8 +283,26 @@ renderEducation() {
               { description_content }
             </span>
           </div>
-          <div className="media-body d-lg-none">
+          <div className="media-body border-bottom d-lg-none">
+            <h3 className="mt-0" style={{ fontSize: "16px", fontWeight: "600" }}>{ exp.title }</h3>
+            <p style={{ fontFamily: "Titillium Web" }}>
+                <span style={{ fontWeight: 400, fontSize: "14px" }}>{ exp.company } </span>
+                <br/>
+                <span style={{ color: "rgba(0,0,0,.6)", fontSize: "13px", fontWeight: 500 }}> { exp.date_started } - { exp.date_ended } • { difference_months } Months </span>
+                <br/>
+                <span style={{ color: "rgba(0,0,0,.6)", fontSize: "13px", fontWeight: 500 }}> { exp.location } </span>
+            </p>
+            <span hidden={ experience_list[index].description.length === 0 }>
+            <ExpandCollapse
+              previewHeight="88px"
+              expandText="more"
+              collapse={false}
+              >
+                { description_content }
+            </ExpandCollapse>
 
+
+            </span>
           </div>
         </div>
       );
@@ -339,55 +314,14 @@ renderEducation() {
 
 
   render() {
-    const bg_images = [
-      "https://wallpapercave.com/wp/wp2022155.jpg",
-      require('../images/bg/shutterstock_674781376.0.jpg'),
-      require('../images/bg/photo-1533683083439-1a776a5653cb.jpg'),
-      require('../images/bg/25048.jpg')
-    ];
-
     const options = [
       'Work', 'Education'
     ];
 
 
     return (
-      <div>
-          <FadeIn delay={350}>
-              <div style={{ height: "auto", minHeight: "100vh", background: "#fafbfe" }}>
-                <div style={{width: '100%', height: "10px"}}></div>
-                <div className="card text-dark" style={{width: '45%', minWidth: "300px", margin: "0 auto", boxShadow: '0 0 35px 0 rgba(154,161,171,.15)'}}>
-                <div className="card-img-top" style={{ background: "url(" + bg_images[Math.floor(Math.random() * Math.floor(bg_images.length))] + ")", height: "200px", backgroundSize: "cover"  }} alt="Card image cap"></div>
-                  <div className="card-body">
-                    <img alt='' className='card-img-profile' src={ require("../images/profile/Wall-ESoundtrack.jpg") } style={{ height: "120px", width: "120px" }} />
-                    <h3 className="card-text" style={{ fontFamily: "Titillium Web", color: "#1c1e20" }} >Max Chakhmatov</h3>
-                    <a href={process.env.PUBLIC_URL + '/Max_Chakhmatov_CS_resume.pdf'} className="btn btn-mycolor"> Resume </a>
-                    <br/>
-                    <br/>
-                    <p>Site is not fully complete yet. (mobile), Education, blog, and about does not work yet. </p>
-                    <div className="footer-copyright py-3">
-                      <a href="https://twitter.com/themaxadorable">
-                        <i className="fab fa-twitter" style={{fontSize: '25px', color: "#1ebc8c"}} />
-                      </a>
-                      <a href="https://www.linkedin.com/in/max-chakhmatov/">
-                        <i className="fab fa-linkedin" style={{fontSize: '25px', paddingLeft: '15px', color: "#1ebc8c"}} />
-                      </a>
-                      <a href="https://github.com/ag-systems">
-                        <i className="fab fa-github" style={{fontSize: '25px', paddingLeft: '15px', color: "#1ebc8c"}} />
-                      </a>
-                      <a href="https://angel.co/chronoci">
-                        <i className="fab fa-angellist" style={{fontSize: '25px', paddingLeft: '15px', color: "#1ebc8c"}} />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="btn-group" style={{ width: "100%"}}>
-                    <button type="button" className="btn border-bottom-active">Experience</button>
-                    <button type="button" className="btn">Blog</button>
-                    <button type="button" className="btn">About</button>
-                  </div>
-                </div>
-                <div style={{width: '100%', height: "35px"}}></div>
-
+      <div style={{ width: "100%", margin: "0 auto" }}>
+              <div style={{width: '100%', height: "35px"}}></div>
                 <div className="card text-dark"  style={{width: '45%', minWidth: "300px", margin: "0 auto", boxShadow: '0 0 35px 0 rgba(154,161,171,.15)'}}>
                   <div style={{ width: "30%", minWidth: "150px", float: "left" }}>
                     <Dropdown options={options} onChange={this._onSelect} value={options[0]} placeholder="Select an option" />
@@ -406,10 +340,7 @@ renderEducation() {
                   </div>
                  */}
                 </div>
-
-              </div>
               <div style={{width: '100%', height: "35px"}}></div>
-          </FadeIn>
       </div>
     );
   }

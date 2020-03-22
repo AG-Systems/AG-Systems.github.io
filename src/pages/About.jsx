@@ -1,0 +1,51 @@
+import React from 'react';
+import FadeIn from 'react-fade-in';
+import $ from "jquery";
+import radial from '../images/other/radial_2.png';
+import { Link } from "react-router-dom";
+
+class About extends React.Component {
+  constructor(props)
+  {
+    super(props);
+    $('html, body').animate({ scrollTop: 0 }, 'fast');
+  }
+
+  goBack()
+  {
+      this.context.router.transitionTo('/');
+  }
+
+  render() {
+    return (
+      <div>
+        <FadeIn delay={500}>
+            <div className="bg" style={{ margin: "0px" }}>
+                <span style={{ marginBottom: "50px", zIndex: "7"  }}>
+                    <FadeIn delay={400}>
+                      <h1 className="text-center" style={{ color: "white"}}> Welcome! </h1>
+                      <h1 className="text-center d-none d-lg-block" style={{ color: "white" }}> -Max Chakhmatov</h1>
+                      <h1 className="text-center d-lg-none" style={{ color: "white"}}> -Max</h1>
+                      <h1 className="text-center d-lg-none" style={{ color: "white" }}> Chakhmatov</h1>
+                    </FadeIn>
+
+                    <div className="card text-white bg-dark mt-5" style={{width: '20rem', margin: "0 auto",
+                        boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px"
+                     }}>
+                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2vhd_Q6vYzz31DCdOpPRVIqc1r9YzSasnHPXKNS-Wp17RwxnM" className="card-img-top" alt="..." />
+                      <div className="card-body">
+                          <h5 className="card-title">Student</h5>
+                          <p className="card-text">Just a nerdy lad who loves programming and computer science. More coming soon....</p>
+                          <button type="button" className="btn btn-light" onClick={ this.goBack }>Go back</button>
+                      </div>
+                    </div>
+                </span>
+                <img className="radial" src={radial} />
+            </div>
+          </FadeIn>
+      </div>
+    );
+  }
+}
+
+export default About;

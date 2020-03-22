@@ -7,14 +7,18 @@ import { Link, Switch, Route } from 'react-router-dom';
 
 
 import Home from "./pages/Home.jsx";
+import Blog from "./pages/Blog.jsx";
+import About from "./pages/About.jsx";
 import Navbar from "./components/Navbar.jsx";
 //import Footer from "./components/Footer.jsx";
 
 ReactDOM.render(
       <BrowserRouter >
-          {/*<Route exact path="/*" render={(props) => <Navbar {...props} /> } />*/}
           <div id="content-main">
-             <Route exact path="/" render={(props) => <Home {...props} /> } />
+              <Route exact path="/*" render={(props) => <Navbar {...props} /> } />
+              <Route exact path="/" render={(props) => <Home {...props} /> } />
+              <Route exact path="/blog" render={(props) => <Blog {...props} /> } />
+              <Route exact path="/about" render={(props) => <About {...props} /> } />
           </div>
           {/* <Route exact path="/*" render={(props) => <Footer {...props} /> } /> */}
       </BrowserRouter >,
