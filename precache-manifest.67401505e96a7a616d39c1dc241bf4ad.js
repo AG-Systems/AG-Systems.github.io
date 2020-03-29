@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ebdaf555f7c3bffb5be61e954a273288",
+    "revision": "2493ca628c5ce29bd541af62f9a93bdf",
     "url": "/index.html"
   },
   {
-    "revision": "87d30290e0b466d9ba2a",
-    "url": "/static/css/2.d58fcd6a.chunk.css"
+    "revision": "4c88eba8a4e8ec2d210a",
+    "url": "/static/css/2.ca025b70.chunk.css"
   },
   {
-    "revision": "94153d124a2f37205926",
-    "url": "/static/css/main.4e288dd3.chunk.css"
+    "revision": "e0eebebf0b765df193d2",
+    "url": "/static/css/main.9e9a3be9.chunk.css"
   },
   {
-    "revision": "87d30290e0b466d9ba2a",
-    "url": "/static/js/2.ca21885f.chunk.js"
+    "revision": "4c88eba8a4e8ec2d210a",
+    "url": "/static/js/2.38b1090b.chunk.js"
   },
   {
-    "revision": "b311f1e546da055dadccce71e0551bcc",
-    "url": "/static/js/2.ca21885f.chunk.js.LICENSE"
+    "revision": "78556c73654ab7e2788f3f65aad082c7",
+    "url": "/static/js/2.38b1090b.chunk.js.LICENSE"
   },
   {
-    "revision": "94153d124a2f37205926",
-    "url": "/static/js/main.cb76f9fe.chunk.js"
+    "revision": "e0eebebf0b765df193d2",
+    "url": "/static/js/main.eed87daf.chunk.js"
   },
   {
     "revision": "717a3ad2364a97b18159",
@@ -44,6 +44,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/bg_red.43f07576.png"
   },
   {
+    "revision": "4a090b7f9d5edd9c29e500fd35b75e24",
+    "url": "/static/media/clashroyale.4a090b7f.png"
+  },
+  {
     "revision": "2c38ec0b395dd1225f404953a1f20e3c",
     "url": "/static/media/eb018d403fa9633f426fded17f843b73.2c38ec0b.jpg"
   },
@@ -54,6 +58,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9ee477085092184ac2d7a8541cb68aea",
     "url": "/static/media/photo-1533683083439-1a776a5653cb.9ee47708.jpg"
+  },
+  {
+    "revision": "7ffcf8995ea4cdd5657731a7cbb9df2e",
+    "url": "/static/media/photo_2020-03-27_10-59-58.7ffcf899.jpg"
   },
   {
     "revision": "9f390f733b676b8b1b7cdd086e6bb6fb",
