@@ -210,19 +210,19 @@ class Navbar extends React.Component {
 
           <div className="btn-group" style={{ width: "100%"}}>
             <Link to="/" className={this.props.match.url === "/" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn dark-text" : "btn white-text") }>
-              <span className="d-lg-none" style={{ fontSize: "11px" }}>Experience</span>
+              <span className="d-lg-none" style={{ fontSize: "10px" }}>Experience</span>
               <span className="d-none d-lg-block">Experience</span>
             </Link>
             <Link to="/education" className={this.props.match.url === "/education" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn dark-text" : "btn white-text") }>
-              <span className="d-lg-none" style={{ fontSize: "11px" }}>Education</span>
+              <span className="d-lg-none" style={{ fontSize: "10px" }}>Education</span>
               <span className="d-none d-lg-block">Education</span>
             </Link>
             <Link to="/miscellaneous" className={this.props.match.url === "/miscellaneous" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn dark-text" : "btn white-text") }>
-              <span className="d-lg-none" style={{ fontSize: "11px" }}>Miscellaneous</span>
+              <span className="d-lg-none" style={{ fontSize: "10px" }}>Miscellaneous</span>
               <span className="d-none d-lg-block">Miscellaneous</span>
             </Link>
             <Link to="/about" className={this.props.match.url === "/about" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn dark-text" : "btn white-text") }>
-              <span className="d-lg-none" style={{ fontSize: "11px" }}>About</span>
+              <span className="d-lg-none" style={{ fontSize: "10px" }}>About</span>
               <span className="d-none d-lg-block">About</span>
             </Link>
           </div>
