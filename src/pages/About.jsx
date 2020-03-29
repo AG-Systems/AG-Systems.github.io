@@ -11,10 +11,7 @@ class About extends React.Component {
     $('html, body').animate({ scrollTop: 0 }, 'fast');
   }
 
-  goBack()
-  {
-      this.context.router.transitionTo('/');
-  }
+
 
   render() {
     return (
@@ -29,16 +26,17 @@ class About extends React.Component {
                       <h1 className="text-center d-lg-none" style={{ color: "white" }}> Chakhmatov</h1>
                     </FadeIn>
 
-                    <div className="card text-white bg-dark mt-5" style={{width: '20rem', margin: "0 auto",
-                        boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px"
-                     }}>
-                      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2vhd_Q6vYzz31DCdOpPRVIqc1r9YzSasnHPXKNS-Wp17RwxnM" className="card-img-top" alt="..." />
-                      <div className="card-body">
-                          <h5 className="card-title">Student</h5>
-                          <p className="card-text">Just a nerdy lad who loves programming and computer science. More coming soon....</p>
-                          <button type="button" className="btn btn-light" onClick={ this.goBack }>Go back</button>
+                    <FadeIn delay={600}>
+                      <div className="card text-white bg-dark mt-5" style={{width: '20rem', margin: "0 auto",
+                          boxShadow: "rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px"
+                       }}>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2vhd_Q6vYzz31DCdOpPRVIqc1r9YzSasnHPXKNS-Wp17RwxnM" className="card-img-top" alt="..." />
+                        <div className="card-body">
+                            <h5 className="card-title"></h5>
+                            <p className="card-text">I have not found a use for this page yet....</p>
+                        </div>
                       </div>
-                    </div>
+                    </FadeIn>
                 </span>
                 <img className="radial" src={radial} />
             </div>

@@ -10,6 +10,7 @@
     "date-diff-js": "^1.0.4",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
+    "object-hash": "^2.0.3",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-dropdown": "^1.7.0",
@@ -18,7 +19,9 @@
     "react-parallax": "^3.0.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "^3.3.0",
-    "simple-parallax-js": "^5.2.0"
+    "react-toggle": "^4.1.1",
+    "simple-parallax-js": "^5.2.0",
+    "universal-cookie": "^4.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

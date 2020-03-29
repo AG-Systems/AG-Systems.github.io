@@ -3,14 +3,16 @@ import FadeIn from 'react-fade-in';
 import $ from "jquery";
 import date from 'date-and-time';
 import { Link } from "react-router-dom";
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
 import ExpandCollapse from 'react-expand-collapse';
 
 
 
+import Card from "../components/Card.jsx";
+
 
 const  DATE_DIFF = require("date-diff-js");
+const hash = require('object-hash');
+
 
 
 class Home extends React.Component {
@@ -19,68 +21,15 @@ class Home extends React.Component {
     super(props);
     $('html, body').animate({ scrollTop: 0 }, 'fast');
 
-    this.state = {
-      current_selection: "experience"
-    };
+
   }
 
-
-  getEducation() {
-    return [
-          {
-            "title": "Software Developer",
-            "school": "QuesGen Systems",
-            "location": "Burlingame, CA",
-            "date_started": "Oct 2019",
-            "date_ended": "Present",
-            "img": require("../images/logos/quesgen.png"),
-            "description": [
-              "• Built internal full-fledged mobile app with flutter, redux, and dart",
-              "• Features proper full-fledged state management, authentication, security, and high performance",
-              "• Wrote and performed unit testing, integration testing, and widget testing for mobile app",
-              "• Fixed bugs, built features and improved the overall experience of QuesGen dashboard",
-              "• Found and fixed security vulnerabilities",
-              "• Tech stack used: Flutter, Dart, Redux (state management), PHP, SQL, and Hack"
-            ],
-            "tldr": "",
-            "media": []
-          },
-          {
-            "title": "Mathematics Tutor",
-            "school": "Foothill College",
-            "location": "Los Altos, CA",
-            "date_started": "Sep 2019",
-            "date_ended": "Dec 2019",
-            "img": require("../images/logos/foothill.png"),
-            "description": [
-              "• Tutored Precalculus (MATH 48A) for pass the torch program"
-            ],
-            "tldr": "",
-            "media": []
-          },
-          {
-            "title": "Programming Tutor",
-            "school": "Self-Employeed",
-            "location": "N/A",
-            "date_started": "Jul 2019",
-            "date_ended": "Nov 2019",
-            "img": require("../images/logos/no_logo.png"),
-            "description": [
-              "• Taught the basics of programming for various high school students",
-              "• Languages taught: Python, Java, and HTML / CSS / JS"
-            ],
-            "tldr": "",
-            "media": []
-          },
-
-        ];
-  }
 
 getExperience() {
   return [
         {
           "title": "Software Developer",
-          "company": "QuesGen Systems",
+          "sub_title": "QuesGen Systems",
           "location": "Burlingame, CA",
           "date_started": "Oct 2019",
           "date_ended": "Present",
@@ -98,7 +47,7 @@ getExperience() {
         },
         {
           "title": "Mathematics Tutor",
-          "company": "Foothill College",
+          "sub_title": "Foothill College",
           "location": "Los Altos, CA",
           "date_started": "Sep 2019",
           "date_ended": "Dec 2019",
@@ -111,7 +60,7 @@ getExperience() {
         },
         {
           "title": "Programming Tutor",
-          "company": "Self-Employeed",
+          "sub_title": "Self-Employeed",
           "location": "N/A",
           "date_started": "Jul 2019",
           "date_ended": "Nov 2019",
@@ -125,7 +74,7 @@ getExperience() {
         },
         {
           "title": "Founder",
-          "company": "ChronoCI",
+          "sub_title": "ChronoCI",
           "location": "Bay Area",
           "date_started": "May 2018",
           "date_ended": "April 2019",
@@ -137,7 +86,7 @@ getExperience() {
         },
         {
           "title": "Software Engineer Intern",
-          "company": "Mindsight.io",
+          "sub_title": "Mindsight.io",
           "location": "Remote",
           "date_started": "Jul 2018",
           "date_ended": "Oct 2018",
@@ -154,7 +103,7 @@ getExperience() {
         },
         {
           "title": "Volunteer",
-          "company": "San Fransisco Shakespeare Festival",
+          "sub_title": "San Fransisco Shakespeare Festival",
           "location": "Cuptertino, CA",
           "date_started": "Jul 2018",
           "date_ended": "Sep 2018",
@@ -166,7 +115,7 @@ getExperience() {
         },
         {
           "title": "Software Engineer Intern",
-          "company": "Fireflies.ai",
+          "sub_title": "Fireflies.ai",
           "location": "San Fransisco, CA",
           "date_started": "Jan 2018",
           "date_ended": "Jul 2018",
@@ -184,7 +133,7 @@ getExperience() {
         },
         {
           "title": "Founder",
-          "company": "PixelML",
+          "sub_title": "PixelML",
           "location": "Bay Area",
           "date_started": "May 2017",
           "date_ended": "Aug 2017",
@@ -201,7 +150,7 @@ getExperience() {
         },
         {
           "title": "Founder",
-          "company": "ConfidentMindset",
+          "sub_title": "ConfidentMindset",
           "location": "Bay Area",
           "date_started": "Oct 2016",
           "date_ended": "Dec 2016",
@@ -213,7 +162,7 @@ getExperience() {
         },
         {
           "title": "Programming Instructor",
-          "company": "theCoderSchool",
+          "sub_title": "theCoderSchool",
           "location": "San Mateo",
           "date_started": "Sep 2016",
           "date_ended": "Feb 2018",
@@ -229,7 +178,7 @@ getExperience() {
         },
         {
           "title": "Assistant",
-          "company": "Swivl",
+          "sub_title": "Swivl",
           "location": "San Carlos",
           "date_started": "May 2016",
           "date_ended": "Jul 2016",
@@ -241,104 +190,22 @@ getExperience() {
           "media": []
         },
       ];
-}
-
-
-
-  renderExperience() {
-
-
-    const experience_list = this.getExperience();
-    let experience = experience_list.map(function(exp, index) {
-      let difference_months = "";
-      if(exp.date_ended == "Present")
-      {
-        difference_months = DATE_DIFF(exp.date_started, (new Date(new Date().getFullYear(),new Date().getMonth())).toString(), 'Month').output + 1;
-      } else {
-        difference_months = DATE_DIFF(exp.date_started, exp.date_ended, "Month").output + 1;
-      }
-
-      let description_content = [];
-      for (let value of experience_list[index].description) {
-        description_content.push(<span key={"description-" + exp.title + exp.company + index}> { value } </span>);
-        description_content.push(<br/>);
-      }
-      description_content.push(<br/>);
-
-
-      return (
-        <div className="media mt-5" key={index}>
-          <img src={ exp.img } className="mr-3 d-none d-lg-block" alt="..." />
-          <img src={ exp.img } className="mr-3 d-lg-none" alt="..." height="45" width="45" />
-          <div className="media-body border-bottom d-none d-lg-block">
-            <h3 className="mt-0" style={{ fontSize: "1.2rem" }}>{ exp.title }</h3>
-            <p style={{ fontFamily: "Titillium Web" }}>
-                <span style={{ fontWeight: "400" }}>{ exp.company } </span>
-                <br/>
-                <span style={{ color: "rgba(0,0,0,.6)" }}> { exp.date_started } - { exp.date_ended } • { difference_months } Months </span>
-                <br/>
-                <span style={{ color: "rgba(0,0,0,.6)" }}> { exp.location } </span>
-            </p>
-            <span>
-              { description_content }
-            </span>
-          </div>
-          <div className="media-body border-bottom d-lg-none">
-            <h3 className="mt-0" style={{ fontSize: "16px", fontWeight: "600" }}>{ exp.title }</h3>
-            <p style={{ fontFamily: "Titillium Web" }}>
-                <span style={{ fontWeight: 400, fontSize: "14px" }}>{ exp.company } </span>
-                <br/>
-                <span style={{ color: "rgba(0,0,0,.6)", fontSize: "13px", fontWeight: 500 }}> { exp.date_started } - { exp.date_ended } • { difference_months } Months </span>
-                <br/>
-                <span style={{ color: "rgba(0,0,0,.6)", fontSize: "13px", fontWeight: 500 }}> { exp.location } </span>
-            </p>
-            <span hidden={ experience_list[index].description.length === 0 }>
-            <ExpandCollapse
-              previewHeight="88px"
-              expandText="more"
-              collapse={false}
-              >
-                { description_content }
-            </ExpandCollapse>
-
-
-            </span>
-          </div>
-        </div>
-      );
-
-    });
-
-    return experience;
   }
 
 
-  render() {
-    const options = [
-      'Work', 'Education'
-    ];
 
+  render() {
 
     return (
       <div style={{ width: "100%", margin: "0 auto" }}>
               <div style={{width: '100%', height: "35px"}}></div>
-                <div className="card text-dark"  style={{width: '45%', minWidth: "300px", margin: "0 auto", boxShadow: '0 0 35px 0 rgba(154,161,171,.15)'}}>
-                  <div style={{ width: "30%", minWidth: "150px", float: "left" }}>
-                    <Dropdown options={options} onChange={this._onSelect} value={options[0]} placeholder="Select an option" />
-                  </div>
+                <div className="card text-dark dark-mode dark-mode-card white-card"  style={{width: '45%', minWidth: "300px", margin: "0 auto"}}>
 
                   <div className="card-body">
 
-                    { this.renderExperience() }
+                    <Card data={ this.getExperience() } />
 
                   </div>
-                  {/*
-                  <div className="card-body">
-
-                    { this.renderEducation() }
-
-                  </div>
-                 */}
                 </div>
               <div style={{width: '100%', height: "35px"}}></div>
       </div>
