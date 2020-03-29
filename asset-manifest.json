@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.9e9a3be9.chunk.css",
-    "main.js": "/static/js/main.eed87daf.chunk.js",
-    "main.js.map": "/static/js/main.eed87daf.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f72a2849.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f72a2849.js.map",
-    "static/css/2.ca025b70.chunk.css": "/static/css/2.ca025b70.chunk.css",
-    "static/js/2.38b1090b.chunk.js": "/static/js/2.38b1090b.chunk.js",
-    "static/js/2.38b1090b.chunk.js.map": "/static/js/2.38b1090b.chunk.js.map",
+    "main.css": "/static/css/main.6318ec1b.chunk.css",
+    "main.js": "/static/js/main.3624b53b.chunk.js",
+    "main.js.map": "/static/js/main.3624b53b.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.96dfc9c7.js",
+    "runtime-main.js.map": "/static/js/runtime-main.96dfc9c7.js.map",
+    "static/css/2.9de2e04a.chunk.css": "/static/css/2.9de2e04a.chunk.css",
+    "static/js/2.6a2494ac.chunk.js": "/static/js/2.6a2494ac.chunk.js",
+    "static/js/2.6a2494ac.chunk.js.map": "/static/js/2.6a2494ac.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.67401505e96a7a616d39c1dc241bf4ad.js": "/precache-manifest.67401505e96a7a616d39c1dc241bf4ad.js",
+    "precache-manifest.4a8aa57a3adac63a41adc955849e232e.js": "/precache-manifest.4a8aa57a3adac63a41adc955849e232e.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.ca025b70.chunk.css.map": "/static/css/2.ca025b70.chunk.css.map",
-    "static/css/main.9e9a3be9.chunk.css.map": "/static/css/main.9e9a3be9.chunk.css.map",
-    "static/js/2.38b1090b.chunk.js.LICENSE": "/static/js/2.38b1090b.chunk.js.LICENSE",
+    "static/css/2.9de2e04a.chunk.css.map": "/static/css/2.9de2e04a.chunk.css.map",
+    "static/css/main.6318ec1b.chunk.css.map": "/static/css/main.6318ec1b.chunk.css.map",
+    "static/js/2.6a2494ac.chunk.js.LICENSE.txt": "/static/js/2.6a2494ac.chunk.js.LICENSE.txt",
     "static/media/25048.jpg": "/static/media/25048.71e25f07.jpg",
     "static/media/58341.jpg": "/static/media/58341.80557e6d.jpg",
     "static/media/Wall-ESoundtrack.jpg": "/static/media/Wall-ESoundtrack.d8e1c1e8.jpg",
@@ -28,10 +28,10 @@
     "static/media/thecoderschool.png": "/static/media/thecoderschool.e6ca02ca.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.f72a2849.js",
-    "static/css/2.ca025b70.chunk.css",
-    "static/js/2.38b1090b.chunk.js",
-    "static/css/main.9e9a3be9.chunk.css",
-    "static/js/main.eed87daf.chunk.js"
+    "static/js/runtime-main.96dfc9c7.js",
+    "static/css/2.9de2e04a.chunk.css",
+    "static/js/2.6a2494ac.chunk.js",
+    "static/css/main.6318ec1b.chunk.css",
+    "static/js/main.3624b53b.chunk.js"
   ]
 }
