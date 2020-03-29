@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ebdaf555f7c3bffb5be61e954a273288",
+    "revision": "db4aa894c9c2ce33f22beb829d182f31",
     "url": "/index.html"
   },
   {
-    "revision": "87d30290e0b466d9ba2a",
-    "url": "/static/css/2.d58fcd6a.chunk.css"
+    "revision": "1d029a7a240df76457a9",
+    "url": "/static/css/2.9de2e04a.chunk.css"
   },
   {
-    "revision": "94153d124a2f37205926",
-    "url": "/static/css/main.4e288dd3.chunk.css"
+    "revision": "3a981de6872436c59c05",
+    "url": "/static/css/main.6318ec1b.chunk.css"
   },
   {
-    "revision": "87d30290e0b466d9ba2a",
-    "url": "/static/js/2.ca21885f.chunk.js"
+    "revision": "1d029a7a240df76457a9",
+    "url": "/static/js/2.6a2494ac.chunk.js"
   },
   {
-    "revision": "b311f1e546da055dadccce71e0551bcc",
-    "url": "/static/js/2.ca21885f.chunk.js.LICENSE"
+    "revision": "992ea4477ea3f714b9b1bb8787205a6f",
+    "url": "/static/js/2.6a2494ac.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "94153d124a2f37205926",
-    "url": "/static/js/main.cb76f9fe.chunk.js"
+    "revision": "3a981de6872436c59c05",
+    "url": "/static/js/main.3624b53b.chunk.js"
   },
   {
-    "revision": "717a3ad2364a97b18159",
-    "url": "/static/js/runtime-main.f72a2849.js"
+    "revision": "819b90fa85e38d2450f6",
+    "url": "/static/js/runtime-main.96dfc9c7.js"
   },
   {
     "revision": "71e25f0738b326304fa697e4891cd76d",
@@ -44,6 +44,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/bg_red.43f07576.png"
   },
   {
+    "revision": "4a090b7f9d5edd9c29e500fd35b75e24",
+    "url": "/static/media/clashroyale.4a090b7f.png"
+  },
+  {
     "revision": "2c38ec0b395dd1225f404953a1f20e3c",
     "url": "/static/media/eb018d403fa9633f426fded17f843b73.2c38ec0b.jpg"
   },
@@ -54,6 +58,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9ee477085092184ac2d7a8541cb68aea",
     "url": "/static/media/photo-1533683083439-1a776a5653cb.9ee47708.jpg"
+  },
+  {
+    "revision": "7ffcf8995ea4cdd5657731a7cbb9df2e",
+    "url": "/static/media/photo_2020-03-27_10-59-58.7ffcf899.jpg"
   },
   {
     "revision": "9f390f733b676b8b1b7cdd086e6bb6fb",
