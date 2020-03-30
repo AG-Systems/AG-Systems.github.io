@@ -40,6 +40,12 @@ class Navbar extends React.Component {
     this.refreshImage = this.refreshImage.bind(this);
     this.changeDarkMode = this.changeDarkMode.bind(this);
 
+    let path = localStorage.getItem('path');
+    if(path) {
+      localStorage.removeItem('path');
+      this.props.history.push([path]);
+    }
+
   }
 
   refreshImage()
