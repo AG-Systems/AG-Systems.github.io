@@ -199,7 +199,7 @@ getExperience() {
     return (
       <div style={{ width: "100%", margin: "0 auto" }}>
               <div style={{width: '100%', height: "35px"}}></div>
-                <div className="card text-dark dark-mode dark-mode-card white-card"  style={{width: '45%', minWidth: "300px", margin: "0 auto"}}>
+                <div className="card"  style={{width: '45%', minWidth: "300px", margin: "0 auto"}} id="card-content">
 
                   <div className="card-body">
 

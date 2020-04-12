@@ -95,7 +95,7 @@ button:focus {
 .border-bottom-active
 {
   border-bottom: 2px solid #1fd19b !important;
-  color: #1fd19b;
+  color: #1fd19b !important;
 }
 button.btn:focus {
   border-width: 0;
@@ -589,4 +589,13 @@ html {
     width: 20px;
     height: 100%;
     background: transparent !important;
+}
+
+.react-toggle--checked .react-toggle-track {
+    background-color: #21ce99 !important;
+}
+
+.react-toggle--checked .react-toggle-thumb {
+    left: 27px;
+    border-color: #1ebc8c !important;
 }

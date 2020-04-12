@@ -17,9 +17,11 @@
     "react-expand-collapse": "^0.2.0",
     "react-fade-in": "^0.1.6",
     "react-parallax": "^3.0.0",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.4.1",
     "react-toggle": "^4.1.1",
+    "redux": "^4.0.5",
     "simple-parallax-js": "^5.2.0",
     "universal-cookie": "^4.0.3"
   },
@@ -48,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
+    "gh-pages": "^2.1.1",
+    "redux-devtools": "^3.5.0"
   }
 }

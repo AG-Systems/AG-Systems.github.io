@@ -15,7 +15,7 @@ class Education extends React.Component {
   constructor(props)
   {
     super(props);
-    $('html, body').animate({ scrollTop: 0 }, 'fast');
+
 
   }
 
@@ -37,7 +37,7 @@ class Education extends React.Component {
           },
           {
             "title": "Foothill College",
-            "degree_title": "Transfer to 4 year university - BS, Computer Science & Mathematics",
+            "sub_title": "Transfer to 4 year university - BS, Computer Science & Mathematics",
             "location": "Los Altos, CA",
             "date_started": "July 2017",
             "date_ended": "June 2020",
@@ -47,15 +47,18 @@ class Education extends React.Component {
               "· Computer Science 2C - Data Structures and Algorithms",
               "· Computer Science 10 - Computer Architecture and Organization",
               "· Computer Science 18 - Discrete Mathematics",
-              "· Physics 4A - Classical Mechanics Physics (Calculus)",
               "· Math 48A - Precalculus I",
               "· Math 48B - Precalculus II",
               "· Math 48C - Precalculus III (Trigonometry)",
               "· Math 1A - Single Variable Calculus (Differentiation)",
-              "· Math 1B - Single Variable Calculus (Integration",
+              "· Math 1B - Single Variable Calculus (Integration)",
               "· Math 1C - Multi-Variable Calculus",
               "· Math 1D - Vector Calculus",
               "· Math 2A - Differential Equations",
+              "· Math 2B - Linear Algebra",
+              "· Physics 4A - Classical Mechanics (with Calculus)",
+              "· Physics 4B - Electricity and Magnetism (with Calculus)",
+              "· Engineering 35 - Principles of statics",
               "· Accounting 1A - Financial Accounting",
               "· Economics 1A - Macroeconomics",
               "· Photography 5 - Introduction to Photography",
@@ -79,7 +82,7 @@ class Education extends React.Component {
       return (
         <div style={{ width: "100%", margin: "0 auto" }}>
                 <div style={{width: '100%', height: "35px"}}></div>
-                  <div className="card text-dark dark-mode dark-mode-card white-card"  style={{width: '45%', minWidth: "300px", margin: "0 auto" }}>
+                  <div className="card"  style={{width: '45%', minWidth: "300px", margin: "0 auto" }} id="card-content">
 
                     <div className="card-body">
 

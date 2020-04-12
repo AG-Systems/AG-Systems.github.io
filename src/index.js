@@ -4,7 +4,9 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 import { Link, Switch, Route } from 'react-router-dom';
-
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import site_state from './state/reducers.js';
 
 import Home from "./pages/Home.jsx";
 import Education from "./pages/Education.jsx";
@@ -13,7 +15,17 @@ import About from "./pages/About.jsx";
 import Navbar from "./components/Navbar.jsx";
 //import Footer from "./components/Footer.jsx";
 
+let dark_mode_initial = new Date().getHours() >= 21 || new Date().getHours() <= 8 ? true : false;
+const store = createStore(
+    site_state, // reducers
+    {
+      dark_mode: dark_mode_initial
+    }
+);
+
+
 ReactDOM.render(
+  <Provider store={store}>
       <BrowserRouter >
           <div id="content-main">
               <Route exact path="/*" render={(props) => <Navbar {...props} /> } />
@@ -23,7 +35,8 @@ ReactDOM.render(
               <Route exact path="/about" render={(props) => <About {...props} /> } />
           </div>
           {/* <Route exact path="/*" render={(props) => <Footer {...props} /> } /> */}
-      </BrowserRouter >,
+      </BrowserRouter >
+    </Provider>,
   document.getElementById('root')
 );
 

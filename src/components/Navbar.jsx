@@ -6,6 +6,10 @@ import {
 import Cookies from 'universal-cookie';
 import Toggle from 'react-toggle'
 import "react-toggle/style.css"
+import { connect } from 'react-redux';
+import { changeDarkMode } from '../state/actions.js';
+
+
 
 class Navbar extends React.Component {
   constructor(props)
@@ -31,11 +35,6 @@ class Navbar extends React.Component {
     }
 
 
-    let dark_mode = new Date().getHours() >= 21 && new Date().getHours() <= 8 ? true : false
-    this.state = {
-      "background_img_url": cookies.get('background_img_url'),
-      "dark_mode": dark_mode
-    };
 
     this.refreshImage = this.refreshImage.bind(this);
     this.changeDarkMode = this.changeDarkMode.bind(this);
@@ -44,6 +43,25 @@ class Navbar extends React.Component {
     if(path) {
       localStorage.removeItem('path');
       this.props.history.push([path]);
+    }
+
+
+    if(this.props.dark_mode_props)
+    {
+      if(this.props.dark_mode_props.dark_mode)
+      {
+        this.changeDarkMode(this.props.dark_mode_props.dark_mode, true);
+        this.state = {
+          "background_img_url": cookies.get('background_img_url'),
+          "dark_mode": this.props.dark_mode_props.dark_mode
+        };
+      } else {
+        this.changeDarkMode(false, true);
+        this.state = {
+          "background_img_url": cookies.get('background_img_url'),
+          "dark_mode": false
+        };
+      }
     }
 
   }
@@ -71,72 +89,65 @@ class Navbar extends React.Component {
 
   }
 
-  changeDarkMode(manual_override=false)
-  {
 
-      if(this.state["dark_mode"])
+  changeDarkMode(dk, mounting=false)
+  {
+      if(dk)
       {
-        this.setState({
-          "dark_mode": false
-        });
+
+          $("body").removeClass('white-body');
+          $("body").addClass('dark-body');
+          $("#navbar-card").removeClass("white-card");
+          $("#navbar-card").addClass("dark-card border-0");
+
+          // navbar tabs and cards
+          $("#card-content").addClass("dark-card");
+          $("#card-content").addClass("bg-white");
+          $(".card-date").css("color","rgba(226, 226, 226, 0.6)");
+          $(".card-location").css("color", "rgba(245, 245, 245, 0.6)");
+
+          if(!mounting)
+          {
+            this.setState({
+                "dark_mode": true
+            });
+          }
+
+      } else {
+
+
         $("body").removeClass('dark-body');
         $("body").addClass('white-body');
         $("#navbar-card").removeClass("dark-card border-0");
         $("#navbar-card").addClass("white-card");
 
-        $(".dark-mode").removeClass("dark-text");
-        $(".dark-mode").addClass("white-text");
+        // navbar tabs and cards
+        $(".btn-navbar").addClass("white-text");
+        $(".btn-navbar").removeClass("dark-text");
+        $("#card-content").addClass("bg-white");
+        $("#card-content").removeClass("dark-card");
+        $(".card-date").css("color","rgba(0, 0, 0, 0.6)");
+        $(".card-location").css("color", "rgba(0, 0, 0, 0.6)");
 
-        $(".dark-mode-card").removeClass("dark-card");
-        $(".dark-mode-card").addClass("white-card");
-
-        $(".dark-mode-card-detail").removeClass("dark-text-detail");
-        $(".dark-mode-card-detail").addClass("white-text-detail");
-
-        $(".dark-mode-card-title").removeClass("dark-text-card-title");
-        $(".dark-mode-card-title").addClass("white-text-card-title");
-
-        $(".dark-mode-card-desc").removeClass("dark-text-card-desc");
-        $(".dark-mode-card-desc").addClass("white-text-card-desc");
-
-        $(".dark-mode-card-sub-title").removeClass("dark-text-card-sub-title");
-        $(".dark-mode-card-sub-title").addClass("white-text-card-sub-title");
-
-        $(".btn").removeClass("dark-text");
-        $(".btn").addClass("white-text");
-      } else {
-        this.setState({
-          "dark_mode": true
-        });
-        $("body").removeClass('white-body');
-        $("body").addClass('dark-body');
-
-        $("#navbar-card").removeClass("white-card");
-        $("#navbar-card").addClass("dark-card border-0");
-
-        $(".dark-mode").addClass("dark-text");
-        $(".dark-mode").removeClass("white-text");
-
-        $(".dark-mode-card").addClass("dark-card");
-        $(".dark-mode-card").removeClass("white-card");
-
-        $(".dark-mode-card-detail").addClass("dark-text-detail");
-        $(".dark-mode-card-detail").removeClass("white-text-detail");
-
-        $(".dark-mode-card-title").addClass("dark-text-card-title");
-        $(".dark-mode-card-title").removeClass("white-text-card-title");
-
-        $(".dark-mode-card-desc").addClass("dark-text-card-desc");
-        $(".dark-mode-card-desc").removeClass("white-text-card-desc");
-
-        $(".dark-mode-card-sub-title").addClass("dark-text-card-sub-title");
-        $(".dark-mode-card-sub-title").removeClass("white-text-card-sub-title");
-
-        $(".btn").addClass("dark-text");
-        $(".btn").removeClass("white-text");
+        if(!mounting)
+        {
+          this.setState({
+              "dark_mode": false
+          });
+        }
       }
   }
 
+  componentDidUpdate(prevProps)
+  {
+    if (this.props.dark_mode_props.dark_mode !== prevProps.dark_mode_props.dark_mode) {
+        this.changeDarkMode(this.props.dark_mode_props.dark_mode);
+    }
+  }
+
+  handleClick = () => {
+    this.props.changeDarkMode(this.state["dark_mode"]);
+  }
 
 
   render() {
@@ -146,7 +157,7 @@ class Navbar extends React.Component {
     return (
       <div id="navbar" hidden={ this.props.match.url === "/about" }>
         <div style={{width: '100%', height: "10px"}}></div>
-        <div className="card text-dark white-card" style={{width: '45%', minWidth: "300px", margin: "0 auto"}} id="navbar-card">
+        <div className="card" style={{width: '45%', minWidth: "300px", margin: "0 auto"}} id="navbar-card">
           <i className="fas fa-redo" alt="Click on icon to refresh background image" style={{ zIndex: 5, position: "absolute", right: 0, padding: "10px", textShadow: "0 0 3px #000", color: "white" }} onClick={ this.refreshImage }></i>
           <div className="card-img-top" style={{ background: "url(" + this.state["background_img_url"] + ")", height: "200px", backgroundSize: "cover" }}></div>
           <div className="card-body">
@@ -156,9 +167,8 @@ class Navbar extends React.Component {
             <br/>
             <br/>
             <p>
-              <span className="dark-mode white-text">
+              <span className="dark-mode">
                 Nerdy person who has a lot of drive. <br/>
-                <span>PS, dark mode is not fully complete</span>
               </span>
               <br/>
               <span style={{ color: "#6e767d" }}>
@@ -195,7 +205,9 @@ class Navbar extends React.Component {
               <Toggle
                 defaultChecked={ this.state["dark_mode"] }
                 icons={false}
-                onChange={ this.changeDarkMode } />
+                onChange={ this.handleClick } />
+              <br/>
+              <span style={{ fontSize: "13px", color: "rgb(110, 118, 125)" }}>ps: dark mode is automatically enabled by time of day </span>
             </div>
 
             <div className="footer-copyright py-3">
@@ -211,23 +223,26 @@ class Navbar extends React.Component {
               <a href="https://angel.co/max-chakhmatov">
                 <i className="fab fa-angellist" style={{fontSize: '25px', paddingLeft: '15px', color: "#1ebc8c"}} />
               </a>
+              <a href="https://stackoverflow.com/users/5487345/auriga?tab=profile">
+                <i className="fab fa-stack-overflow" style={{fontSize: '25px', paddingLeft: '15px', color: "#1ebc8c"}} />
+              </a>
             </div>
           </div>
 
           <div className="btn-group" style={{ width: "100%"}}>
-            <Link to="/" className={this.props.match.url === "/" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn dark-text" : "btn white-text") }>
+            <Link to="/" className={this.props.match.url === "/" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn btn-navbar dark-text" : "btn btn-navbar white-text") }>
               <span className="d-lg-none" style={{ fontSize: "10px" }}>Experience</span>
               <span className="d-none d-lg-block">Experience</span>
             </Link>
-            <Link to="/education" className={this.props.match.url === "/education" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn dark-text" : "btn white-text") }>
+            <Link to="/education" className={this.props.match.url === "/education" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn btn-navbar dark-text" : "btn btn-navbar white-text") }>
               <span className="d-lg-none" style={{ fontSize: "10px" }}>Education</span>
               <span className="d-none d-lg-block">Education</span>
             </Link>
-            <Link to="/miscellaneous" className={this.props.match.url === "/miscellaneous" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn dark-text" : "btn white-text") }>
+            <Link to="/miscellaneous" className={this.props.match.url === "/miscellaneous" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn btn-navbar dark-text" : "btn btn-navbar white-text") }>
               <span className="d-lg-none" style={{ fontSize: "10px" }}>Miscellaneous</span>
               <span className="d-none d-lg-block">Miscellaneous</span>
             </Link>
-            <Link to="/about" className={this.props.match.url === "/about" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn dark-text" : "btn white-text") }>
+            <Link to="/about" className={this.props.match.url === "/about" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn btn-navbar dark-text" : "btn btn-navbar white-text") }>
               <span className="d-lg-none" style={{ fontSize: "10px" }}>About</span>
               <span className="d-none d-lg-block">About</span>
             </Link>
@@ -239,4 +254,24 @@ class Navbar extends React.Component {
   }
 }
 
-export default Navbar;
+// export default Navbar;
+
+const mapStateToProps = (state, ownProps) => {
+    return {
+        dark_mode_props: state
+    };
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        changeDarkMode: (dk) => {
+            dispatch(changeDarkMode(dk));
+        }
+    };
+};
+
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Navbar);
