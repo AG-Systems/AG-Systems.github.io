@@ -242,9 +242,9 @@ class Navbar extends React.Component {
               <span className="d-lg-none" style={{ fontSize: "10px" }}>Miscellaneous</span>
               <span className="d-none d-lg-block">Miscellaneous</span>
             </Link>
-            <Link to="/about" className={this.props.match.url === "/about" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn btn-navbar dark-text" : "btn btn-navbar white-text") }>
-              <span className="d-lg-none" style={{ fontSize: "10px" }}>About</span>
-              <span className="d-none d-lg-block">About</span>
+            <Link to="/more" className={this.props.match.url === "/more" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn btn-navbar dark-text" : "btn btn-navbar white-text") }>
+              <span className="d-lg-none" style={{ fontSize: "10px" }}>More</span>
+              <span className="d-none d-lg-block">More</span>
             </Link>
           </div>
 

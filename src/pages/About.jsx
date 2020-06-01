@@ -11,6 +11,10 @@ class About extends React.Component {
     $('html, body').animate({ scrollTop: 0 }, 'fast');
   }
 
+  goBackToHome()
+  {
+    window.location.href = "/";
+  }
 
 
   render() {
@@ -18,7 +22,7 @@ class About extends React.Component {
       <div>
         <FadeIn delay={500}>
             <div className="bg" style={{ margin: "0px" }}>
-                <span style={{ marginBottom: "50px", zIndex: "7"  }}>
+                <span style={{ marginBottom: "50px" }}>
                     <FadeIn delay={400}>
                       <h1 className="text-center" style={{ color: "white"}}> Welcome! </h1>
                       <h1 className="text-center d-none d-lg-block" style={{ color: "white" }}> -Max Chakhmatov</h1>
@@ -33,7 +37,10 @@ class About extends React.Component {
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2vhd_Q6vYzz31DCdOpPRVIqc1r9YzSasnHPXKNS-Wp17RwxnM" className="card-img-top" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title"></h5>
-                            <p className="card-text">I have not found a use for this page yet....</p>
+                              <p className="card-text">I have not found a use for this page yet....
+                              <br/>
+                              <span onClick={ this.goBackToHome } className="btn btn-mycolor"> Home </span>
+                            </p>
                         </div>
                       </div>
                     </FadeIn>
