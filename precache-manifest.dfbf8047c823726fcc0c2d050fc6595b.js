@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e3e571108e680c259b581ad19e65e7b9",
+    "revision": "4a45e265d8373f5c4f56d9f26efac289",
     "url": "/index.html"
   },
   {
-    "revision": "425481c47d01372d4f13",
+    "revision": "5a35e663396a07312f27",
     "url": "/static/css/2.9de2e04a.chunk.css"
   },
   {
-    "revision": "9e5a413041347693e6ff",
+    "revision": "f3524bb42beb90c010e7",
     "url": "/static/css/main.7599b007.chunk.css"
   },
   {
-    "revision": "425481c47d01372d4f13",
-    "url": "/static/js/2.4bd93a4a.chunk.js"
+    "revision": "5a35e663396a07312f27",
+    "url": "/static/js/2.370e652a.chunk.js"
   },
   {
     "revision": "992ea4477ea3f714b9b1bb8787205a6f",
-    "url": "/static/js/2.4bd93a4a.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.370e652a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9e5a413041347693e6ff",
-    "url": "/static/js/main.2db56106.chunk.js"
+    "revision": "f3524bb42beb90c010e7",
+    "url": "/static/js/main.0e557fcc.chunk.js"
   },
   {
     "revision": "819b90fa85e38d2450f6",
@@ -74,5 +74,13 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e6ca02ca02e4b3960c964002a7205b43",
     "url": "/static/media/thecoderschool.e6ca02ca.png"
+  },
+  {
+    "revision": "9157e5ff969183ae040f7df81b68b556",
+    "url": "/static/media/ucsc_engineering.9157e5ff.png"
+  },
+  {
+    "revision": "6b50d8fcaa543c1b1d9edab5ca50f9e3",
+    "url": "/static/media/walmart.6b50d8fc.jfif"
   }
 ]);
