@@ -163,14 +163,13 @@ class Navbar extends React.Component {
           <div className="card-body">
             <img alt='' className='card-img-profile' src={ require("../images/profile/Wall-ESoundtrack.jpg") } style={{ height: "120px", width: "120px" }} />
             <h3 className="card-text" style={{ fontFamily: "Titillium Web", color: this.state["dark_mode"] ? "#f8f9fa" : "#1c1e20"}} >Max Chakhmatov</h3>
-            <a href={process.env.PUBLIC_URL + '/Max_Chakhmatov_CS_resume.pdf'} className="btn btn-mycolor"> Resume </a>
+            <a href={process.env.PUBLIC_URL + '/Max_Chakhmatov_CS_resume_2020.pdf'} className="btn btn-mycolor"> Resume </a>
             <br/>
             <br/>
             <p>
               <span className="dark-mode">
                 Nerdy person who has a lot of drive. <br/>
               </span>
-              <br/>
               <span style={{ color: "#6e767d" }}>
                   <i className="fas fa-map-marker-alt"></i> Planet earth
               </span>
@@ -211,11 +210,8 @@ class Navbar extends React.Component {
             </div>
 
             <div className="footer-copyright py-3">
-              <a href="https://twitter.com/themaxadorable">
-                <i className="fab fa-twitter" style={{fontSize: '25px', color: "#1ebc8c"}} />
-              </a>
               <a href="https://www.linkedin.com/in/max-chakhmatov/">
-                <i className="fab fa-linkedin" style={{fontSize: '25px', paddingLeft: '15px', color: "#1ebc8c"}} />
+                <i className="fab fa-linkedin" style={{fontSize: '25px', color: "#1ebc8c"}} />
               </a>
               <a href="https://github.com/ag-systems">
                 <i className="fab fa-github" style={{fontSize: '25px', paddingLeft: '15px', color: "#1ebc8c"}} />
@@ -225,6 +221,9 @@ class Navbar extends React.Component {
               </a>
               <a href="https://stackoverflow.com/users/5487345/auriga?tab=profile">
                 <i className="fab fa-stack-overflow" style={{fontSize: '25px', paddingLeft: '15px', color: "#1ebc8c"}} />
+              </a>
+              <a href="https://twitter.com/themaxadorable">
+                <i className="fab fa-twitter" style={{fontSize: '25px', color: "#1ebc8c" , paddingLeft: '15px' }} />
               </a>
             </div>
           </div>

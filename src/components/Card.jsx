@@ -46,7 +46,7 @@ class Card extends React.Component {
         $("body").addClass('white-body');
         $("#navbar-card").removeClass("dark-card border-0");
         $("#navbar-card").addClass("white-card");
-        
+
         // navbar tabs and cards
         $(".btn-navbar").addClass("white-text");
         $(".btn-navbar").removeClass("dark-text");

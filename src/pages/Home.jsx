@@ -28,19 +28,62 @@ class Home extends React.Component {
 getExperience() {
   return [
         {
+          "title": "Physics Teacher Assistant",
+          "sub_title": "Foothill College",
+          "location": "Los Altos Hills, CA",
+          "date_started": "Jun 2020",
+          "date_ended": "Aug 2020",
+          "img": require("../images/logos/foothill.png"),
+          "description": [
+            "• Class: Physics 4B (Electricity & Magnetism)",
+            "• Hosted office hours to assist students on their homework",
+            "• 6-week summer session",
+            "• Professor: Max Yuen"
+          ],
+          "tldr": "",
+          "media": []
+        },
+        {
+          "title": "Frontend Engineer Intern",
+          "sub_title": "Walmart eCommerce",
+          "location": "Sunnyvale, CA",
+          "date_started": "Jun 2020",
+          "date_ended": "Aug 2020",
+          "img": require("../images/logos/walmart.jfif"),
+          "description": [
+            "• Tech stack used: React.js, React-native, Redux (state management), typescript, ES6 JavaScript",
+          ],
+          "tldr": "",
+          "media": []
+        },
+        {
+          "title": "Engineering Intern",
+          "sub_title": "Walmart Labs",
+          "location": "San Bruno, CA",
+          "date_started": "Jun 2020",
+          "date_ended": "Aug 2020",
+          "img": require("../images/logos/walmartlabs.png"),
+          "description": [
+            "• I technically work for both, eCommerce and labs",
+          ],
+          "tldr": "",
+          "media": []
+        },
+        {
           "title": "Software Developer",
           "sub_title": "QuesGen Systems",
           "location": "Burlingame, CA",
           "date_started": "Oct 2019",
-          "date_ended": "Present",
+          "date_ended": "Jun 2020",
           "img": require("../images/logos/quesgen.png"),
           "description": [
             "• Built internal full-fledged mobile app with flutter, redux, and dart",
             "• Features proper full-fledged state management, authentication, security, and high performance",
             "• Wrote and performed unit testing, integration testing, and widget testing for mobile app",
             "• Fixed bugs, built features and improved the overall experience of QuesGen dashboard",
+            "• Integrated end to end testing with selenium with python and CircleCI (Continuous integration)",
             "• Found and fixed security vulnerabilities",
-            "• Tech stack used: Flutter, Dart, Redux (state management), PHP, SQL, and Hack"
+            "• Tech stack used: Flutter, Dart, Redux (state management),Python, Selenium, PHP, SQL, and Hack"
           ],
           "tldr": "",
           "media": []
@@ -48,7 +91,7 @@ getExperience() {
         {
           "title": "Mathematics Tutor",
           "sub_title": "Foothill College",
-          "location": "Los Altos, CA",
+          "location": "Los Altos Hills, CA",
           "date_started": "Sep 2019",
           "date_ended": "Dec 2019",
           "img": require("../images/logos/foothill.png"),

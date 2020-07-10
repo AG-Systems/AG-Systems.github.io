@@ -27,7 +27,7 @@ class Education extends React.Component {
             "location": "Santa Cruz, CA",
             "date_started": "Sept 2020",
             "date_ended": "N/A",
-            "img": require("../images/logos/ucsc.jpg"),
+            "img": require("../images/logos/ucsc_engineering.png"),
             "description": [
 
             ],
@@ -43,6 +43,7 @@ class Education extends React.Component {
             "date_ended": "June 2020",
             "img": require("../images/logos/foothill.png"),
             "description": [
+              "Course work: ",
               "· Computer Science 2B - Intermediate Software Design in C++",
               "· Computer Science 2C - Data Structures and Algorithms",
               "· Computer Science 10 - Computer Architecture and Organization",
