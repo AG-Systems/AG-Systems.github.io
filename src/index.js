@@ -13,8 +13,9 @@ import Education from "./pages/Education.jsx";
 import Miscellaneous from "./pages/Miscellaneous.jsx";
 import About from "./pages/About.jsx";
 import More from "./pages/More.jsx";
+import Skills from "./pages/Skills.jsx";
 import Navbar from "./components/Navbar.jsx";
-//import Footer from "./components/Footer.jsx";
+import Footer from "./components/Footer.jsx";
 
 let dark_mode_initial = new Date().getHours() >= 21 || new Date().getHours() <= 8 ? true : false;
 const store = createStore(
@@ -34,7 +35,9 @@ ReactDOM.render(
               <Route exact path="/education" render={(props) => <Education {...props} /> } />
               <Route exact path="/miscellaneous" render={(props) => <Miscellaneous {...props} /> } />
               <Route exact path="/about" render={(props) => <About {...props} /> } />
-              <Route exact path="/more" render={(props) => <More {...props} /> } />
+              <Route exact path="/skills" render={(props) => <Skills {...props} /> } />
+              {/* <Route exact path="/more" render={(props) => <More {...props} /> } /> */}
+
           </div>
           {/* <Route exact path="/*" render={(props) => <Footer {...props} /> } /> */}
       </BrowserRouter >

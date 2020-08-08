@@ -10,23 +10,28 @@ import { connect } from 'react-redux';
 import { changeDarkMode } from '../state/actions.js';
 
 
+const bg_images = [
+  require('../images/bg/wp2022155.jpg'),
+  require('../images/bg/shutterstock_674781376.0.jpg'),
+  require('../images/bg/photo-1533683083439-1a776a5653cb.jpg'),
+  require('../images/bg/25048.jpg'),
+  require("../images/bg/photo-1507041957456-9c397ce39c97.jpg"),
+  require("../images/bg/eb018d403fa9633f426fded17f843b73.jpg"),
+  require("../images/bg/bg_red.png"),
+  require("../images/bg/58341.jpg"),
+  require("../images/bg/photo_2020-03-27_10-59-58.jpg"),
+  require("../images/bg/lion.jpg"),
+  require("../images/bg/bear_valley.jpg"),
+  require("../images/bg/beach1.jpg"),
+  require("../images/bg/Beach_Summer_Surfboard_Van_HD_Images.jpg"),
+];
 
 class Navbar extends React.Component {
   constructor(props)
   {
     super(props);
 
-    const bg_images = [
-      "https://wallpapercave.com/wp/wp2022155.jpg",
-      require('../images/bg/shutterstock_674781376.0.jpg'),
-      require('../images/bg/photo-1533683083439-1a776a5653cb.jpg'),
-      require('../images/bg/25048.jpg'),
-      require("../images/bg/photo-1507041957456-9c397ce39c97.jpg"),
-      require("../images/bg/eb018d403fa9633f426fded17f843b73.jpg"),
-      require("../images/bg/bg_red.png"),
-      require("../images/bg/58341.jpg"),
-      require("../images/bg/photo_2020-03-27_10-59-58.jpg")
-    ];
+
 
     const cookies = new Cookies();
     if(!cookies.get('background_img_url'))
@@ -68,17 +73,6 @@ class Navbar extends React.Component {
 
   refreshImage()
   {
-      const bg_images = [
-        "https://wallpapercave.com/wp/wp2022155.jpg",
-        require('../images/bg/shutterstock_674781376.0.jpg'),
-        require('../images/bg/photo-1533683083439-1a776a5653cb.jpg'),
-        require('../images/bg/25048.jpg'),
-        require("../images/bg/photo-1507041957456-9c397ce39c97.jpg"),
-        require("../images/bg/eb018d403fa9633f426fded17f843b73.jpg"),
-        require("../images/bg/bg_red.png"),
-        require("../images/bg/58341.jpg"),
-        require("../images/bg/photo_2020-03-27_10-59-58.jpg")
-      ];
 
       const cookies = new Cookies();
       cookies.set('background_img_url', bg_images[Math.floor(Math.random() * Math.floor(bg_images.length))]);
@@ -163,7 +157,7 @@ class Navbar extends React.Component {
           <div className="card-body">
             <img alt='' className='card-img-profile' src={ require("../images/profile/Wall-ESoundtrack.jpg") } style={{ height: "120px", width: "120px" }} />
             <h3 className="card-text" style={{ fontFamily: "Titillium Web", color: this.state["dark_mode"] ? "#f8f9fa" : "#1c1e20"}} >Max Chakhmatov</h3>
-            <a href={process.env.PUBLIC_URL + '/Max_Chakhmatov_CS_resume_2020.pdf'} className="btn btn-mycolor"> Resume </a>
+            <a href={process.env.PUBLIC_URL + '/Max_Chakhmatov_resume.pdf'} className="btn btn-mycolor"> Resume </a>
             <br/>
             <br/>
             <p>
@@ -241,10 +235,16 @@ class Navbar extends React.Component {
               <span className="d-lg-none" style={{ fontSize: "10px" }}>Miscellaneous</span>
               <span className="d-none d-lg-block">Miscellaneous</span>
             </Link>
+            <Link to="/skills" className={this.props.match.url === "/skills" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn btn-navbar dark-text" : "btn btn-navbar white-text") }>
+              <span className="d-lg-none" style={{ fontSize: "10px" }}>Skills</span>
+              <span className="d-none d-lg-block">Skills</span>
+            </Link>
+            {/*
             <Link to="/more" className={this.props.match.url === "/more" ? "btn border-bottom-active" : ( this.state["dark_mode"] ? "btn btn-navbar dark-text" : "btn btn-navbar white-text") }>
               <span className="d-lg-none" style={{ fontSize: "10px" }}>More</span>
               <span className="d-none d-lg-block">More</span>
             </Link>
+            */}
           </div>
 
         </div>

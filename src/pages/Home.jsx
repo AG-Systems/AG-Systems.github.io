@@ -28,22 +28,6 @@ class Home extends React.Component {
 getExperience() {
   return [
         {
-          "title": "Physics Teacher Assistant",
-          "sub_title": "Foothill College",
-          "location": "Los Altos Hills, CA",
-          "date_started": "Jun 2020",
-          "date_ended": "Aug 2020",
-          "img": require("../images/logos/foothill.png"),
-          "description": [
-            "• Class: Physics 4B (Electricity & Magnetism)",
-            "• Hosted office hours to assist students on their homework",
-            "• 6-week summer session",
-            "• Professor: Max Yuen"
-          ],
-          "tldr": "",
-          "media": []
-        },
-        {
           "title": "Frontend Engineer Intern",
           "sub_title": "Walmart eCommerce",
           "location": "Sunnyvale, CA",
@@ -51,6 +35,9 @@ getExperience() {
           "date_ended": "Aug 2020",
           "img": require("../images/logos/walmart.jfif"),
           "description": [
+            "• Built mobile app using React Native (Typescript, and Redux) for internal testing",
+            "• Built an UI component sharing library for other teams to use with JavaScript (with React)",
+            "• UI component sharing library is highly optimized for speed, and bundle size (30%+ more efficient)",
             "• Tech stack used: React.js, React-native, Redux (state management), typescript, ES6 JavaScript",
           ],
           "tldr": "",
@@ -65,6 +52,23 @@ getExperience() {
           "img": require("../images/logos/walmartlabs.png"),
           "description": [
             "• I technically work for both, eCommerce and labs",
+          ],
+          "tldr": "",
+          "media": []
+        },
+        {
+          "title": "Physics Teacher Assistant",
+          "sub_title": "Foothill College",
+          "location": "Los Altos Hills, CA",
+          "date_started": "Jun 2020",
+          "date_ended": "Aug 2020",
+          "img": require("../images/logos/foothill.png"),
+          "description": [
+            "• Class: Physics 4B (Electricity & Magnetism)",
+            "• Hosted office hours to assist students on their homework",
+            "• Used LaTeX to create a formula sheet for students",
+            "• 6-week summer session",
+            "• Professor: Max Yuen"
           ],
           "tldr": "",
           "media": []
@@ -123,6 +127,10 @@ getExperience() {
           "date_ended": "April 2019",
           "img": require("../images/logos/chronoci.jpg"),
           "description": [
+            "• Built a platform for testing web applications for security vulnerabilities.",
+            "• 4 daily users (minimum), & 70 total users",
+            "• Pitched to Sequoia Capital",
+            "• Technologies: React, Redux, Webpack, Ruby on Rails, GraphQL, Apollo, Docker, Docker-compose, Google Kubernetes Engine, Python, Flask, Stripe api, GitHub api, GitLab api, Bitbucket api, MongoDB, Redis, PostgreSQL"
           ],
           "tldr": "",
           "media": []

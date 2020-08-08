@@ -25,11 +25,14 @@ class Education extends React.Component {
             "title": "University of California, Santa Cruz",
             "sub_title": "Bachelor of Science - BS, Robotics Engineering",
             "location": "Santa Cruz, CA",
-            "date_started": "Sept 2020",
+            "date_started": "Oct 2020",
             "date_ended": "N/A",
             "img": require("../images/logos/ucsc_engineering.png"),
             "description": [
-
+              "Course work: ",
+              "· Electrical & Computer Engineering 101 - Introduction to Electronic Circuits",
+              "· Computer Science Engineering 20 - Beginning Python",
+              "· Ocean Sciences 90 - Fundamentals of Climate",
             ],
             "extra": [],
             "tldr": "",
@@ -43,6 +46,9 @@ class Education extends React.Component {
             "date_ended": "June 2020",
             "img": require("../images/logos/foothill.png"),
             "description": [
+              "Activities: ",
+              "· Co-founder of Computer Science Interviewing Club",
+              "· STEM Division Award nominated by Professor Frank Cascarano (Physics 4b)",
               "Course work: ",
               "· Computer Science 2B - Intermediate Software Design in C++",
               "· Computer Science 2C - Data Structures and Algorithms",
