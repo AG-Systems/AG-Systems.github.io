@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4a45e265d8373f5c4f56d9f26efac289",
+    "revision": "f6cc570af747e6e5d8e2345020c3ab19",
     "url": "/index.html"
   },
   {
-    "revision": "5a35e663396a07312f27",
+    "revision": "d1e1d5997bd75572aef7",
     "url": "/static/css/2.9de2e04a.chunk.css"
   },
   {
-    "revision": "f3524bb42beb90c010e7",
-    "url": "/static/css/main.7599b007.chunk.css"
+    "revision": "5d6ce15779e118fbaebb",
+    "url": "/static/css/main.504d521a.chunk.css"
   },
   {
-    "revision": "5a35e663396a07312f27",
-    "url": "/static/js/2.370e652a.chunk.js"
+    "revision": "d1e1d5997bd75572aef7",
+    "url": "/static/js/2.1ebc91fe.chunk.js"
   },
   {
     "revision": "992ea4477ea3f714b9b1bb8787205a6f",
-    "url": "/static/js/2.370e652a.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.1ebc91fe.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f3524bb42beb90c010e7",
-    "url": "/static/js/main.0e557fcc.chunk.js"
+    "revision": "5d6ce15779e118fbaebb",
+    "url": "/static/js/main.dee131cb.chunk.js"
   },
   {
     "revision": "819b90fa85e38d2450f6",
@@ -36,8 +36,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/58341.80557e6d.jpg"
   },
   {
+    "revision": "8b994314b00e4cbcfd7f6d9f78a6cff3",
+    "url": "/static/media/Beach_Summer_Surfboard_Van_HD_Images.8b994314.jpg"
+  },
+  {
     "revision": "d8e1c1e8b3bbe1f389a096793c2cd327",
     "url": "/static/media/Wall-ESoundtrack.d8e1c1e8.jpg"
+  },
+  {
+    "revision": "6e5dbe3a0fa552393c629854d66305a9",
+    "url": "/static/media/beach1.6e5dbe3a.jpg"
+  },
+  {
+    "revision": "5c61f707c00e288a5124a10c7e908fb0",
+    "url": "/static/media/bear_valley.5c61f707.jpg"
   },
   {
     "revision": "43f0757683cec56f75b44b17edecbd8c",
@@ -50,6 +62,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2c38ec0b395dd1225f404953a1f20e3c",
     "url": "/static/media/eb018d403fa9633f426fded17f843b73.2c38ec0b.jpg"
+  },
+  {
+    "revision": "1195eb5c6df8d601527891efa9cef43f",
+    "url": "/static/media/lion.1195eb5c.jpg"
   },
   {
     "revision": "98a028c54f772fe4cb0f912444d61b3c",
@@ -82,5 +98,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6b50d8fcaa543c1b1d9edab5ca50f9e3",
     "url": "/static/media/walmart.6b50d8fc.jfif"
+  },
+  {
+    "revision": "fd39ed16cda7ca62fbd7908aa1239302",
+    "url": "/static/media/wp2022155.fd39ed16.jpg"
   }
 ]);
