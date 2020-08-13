@@ -24,6 +24,7 @@ class Skills extends React.Component {
 
       return (
         <div style={{ width: "100%", margin: "0 auto" }}>
+                <Card data={ [{}] } show={false} />
                 <div style={{width: '100%', height: "35px"}}></div>
                   <div className="card"  style={{width: '45%', minWidth: "300px", margin: "0 auto" }} id="card-content">
 
