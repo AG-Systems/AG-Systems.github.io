@@ -41,6 +41,7 @@ class Skills extends React.Component {
                           <span className="tag">Fullstack Engineering</span>
                           <span className="tag">3D Modeling</span>
                           <span className="tag">Level Design</span>
+                          <span className="tag">Video editing</span>
                         </div>
                       </div>
                     </div>
@@ -58,9 +59,9 @@ class Skills extends React.Component {
                               height={30}
                               alt="3ds Max"
                               className="software-icon-image"
-                              src="https://cdna.artstation.com/p/softwares/icons/000/000/002/default/3dsmax-20172.png?1504815710"
+                              src={ require("../images/icons/AutoCAD.png") }
                             />
-                            <div className="software-icon-name">3ds Max</div>
+                            <div className="software-icon-name">AutoCAD</div>
                           </div>
                           <div className="software-icon-item mr-3 ml-3">
                             <img
@@ -76,16 +77,6 @@ class Skills extends React.Component {
                             <img
                               width={30}
                               height={30}
-                              alt="ZBrush"
-                              className="software-icon-image"
-                              src="https://cdna.artstation.com/p/softwares/icons/000/000/046/default/zBrush3.png?1505488078"
-                            />
-                            <div className="software-icon-name">ZBrush</div>
-                          </div>
-                          <div className="software-icon-item mr-3 ml-3">
-                            <img
-                              width={30}
-                              height={30}
                               alt="Fusion 360"
                               className="software-icon-image"
                               src="https://cdna.artstation.com/p/softwares/icons/000/000/016/default/fusion360.png?1504818877"
@@ -96,51 +87,11 @@ class Skills extends React.Component {
                             <img
                               width={30}
                               height={30}
-                              alt="Substance Designer"
-                              className="software-icon-image"
-                              src="https://cdna.artstation.com/p/softwares/icons/000/000/042/default/Substance_Designer_Icon.png?1456833082"
-                            />
-                            <div className="software-icon-name">Substance Designer</div>
-                          </div>
-                          <div className="software-icon-item mr-3 ml-3">
-                            <img
-                              width={30}
-                              height={30}
-                              alt="Substance Painter"
-                              className="software-icon-image"
-                              src="https://cdnb.artstation.com/p/softwares/icons/000/000/041/default/Substance_Painter_Icon.png?1456833230"
-                            />
-                            <div className="software-icon-name">Substance Painter</div>
-                          </div>
-                          <div className="software-icon-item mr-3 ml-3">
-                            <img
-                              width={30}
-                              height={30}
-                              alt="3DCoat"
-                              className="software-icon-image"
-                              src="https://cdnb.artstation.com/p/softwares/icons/000/000/059/default/3d-coat_logo_ball.png?1511365214"
-                            />
-                            <div className="software-icon-name">3DCoat</div>
-                          </div>
-                          <div className="software-icon-item mr-3 ml-3">
-                            <img
-                              width={30}
-                              height={30}
                               alt="Maya"
                               className="software-icon-image"
                               src="https://cdna.artstation.com/p/softwares/icons/000/000/024/default/maya.png?1504879343"
                             />
                             <div className="software-icon-name">Maya</div>
-                          </div>
-                          <div className="software-icon-item mr-3 ml-3">
-                            <img
-                              width={30}
-                              height={30}
-                              alt="UVLayout"
-                              className="software-icon-image"
-                              src="https://cdnb.artstation.com/p/softwares/icons/000/000/095/default/uvlayout.png?1424865993"
-                            />
-                            <div className="software-icon-name">UVLayout</div>
                           </div>
                           <div className="software-icon-item mr-3 ml-3">
                             <img
@@ -166,11 +117,251 @@ class Skills extends React.Component {
                             <img
                               width={30}
                               height={30}
-                              alt="CRYENGINE"
+                              alt="Unity"
                               className="software-icon-image"
-                              src="https://cdnb.artstation.com/p/softwares/icons/000/000/091/default/cryengine.png?1424866454"
+                              src={ require("../images/icons/AfterEffects.png") }
                             />
-                            <div className="software-icon-name">CRYENGINE</div>
+                            <div className="software-icon-name">After Effects</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Assembly.png") }
+                            />
+                            <div className="software-icon-name">Assembly</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/C.png") }
+                            />
+                            <div className="software-icon-name">C</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/C++.png") }
+                            />
+                            <div className="software-icon-name">C++</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/CircleCI.png") }
+                            />
+                            <div className="software-icon-name">CircleCI</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/GraphQL.png") }
+                            />
+                            <div className="software-icon-name">GrapQL</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/JavaScript.png") }
+                            />
+                            <div className="software-icon-name">ES6 JavaScript</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Nodejs.png") }
+                            />
+                            <div className="software-icon-name">Node.js</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/PHP.png") }
+                            />
+                            <div className="software-icon-name">PHP</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Python.png") }
+                            />
+                            <div className="software-icon-name">Python</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Ruby.png") }
+                            />
+                            <div className="software-icon-name">Ruby</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/rails.png") }
+                            />
+                            <div className="software-icon-name">Ruby on Rails</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/SocketIO.png") }
+                            />
+                            <div className="software-icon-name">Socket IO</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Webpack.png") }
+                            />
+                            <div className="software-icon-name">Webpack</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Meteorjs.png") }
+                            />
+                            <div className="software-icon-name">Meteor.js</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/React.png") }
+                            />
+                            <div className="software-icon-name">React.js</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/React.png") }
+                            />
+                            <div className="software-icon-name">React-router</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/React.png") }
+                            />
+                            <div className="software-icon-name">React Native</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Redux.png") }
+                            />
+                            <div className="software-icon-name">Redux</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Jest.png") }
+                            />
+                            <div className="software-icon-name">Jest</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Latex.png") }
+                            />
+                            <div className="software-icon-name">Latex</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Mathematica.png") }
+                            />
+                            <div className="software-icon-name">Mathematica</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Flask.png") }
+                            />
+                            <div className="software-icon-name">Flask</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/Excel.png") }
+                            />
+                            <div className="software-icon-name">Excel</div>
+                          </div>
+                          <div className="software-icon-item mr-3 ml-3">
+                            <img
+                              width={30}
+                              height={30}
+                              alt="Unity"
+                              className="software-icon-image"
+                              src={ require("../images/icons/MongoDB.png") }
+                            />
+                            <div className="software-icon-name">MongoDB</div>
                           </div>
                         </div>
                         </div>
