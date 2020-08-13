@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.504d521a.chunk.css",
-    "main.js": "/static/js/main.dee131cb.chunk.js",
-    "main.js.map": "/static/js/main.dee131cb.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.96dfc9c7.js",
-    "runtime-main.js.map": "/static/js/runtime-main.96dfc9c7.js.map",
+    "main.css": "/static/css/main.18b417a4.chunk.css",
+    "main.js": "/static/js/main.f61d2a95.chunk.js",
+    "main.js.map": "/static/js/main.f61d2a95.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b3424a4b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b3424a4b.js.map",
     "static/css/2.9de2e04a.chunk.css": "/static/css/2.9de2e04a.chunk.css",
-    "static/js/2.1ebc91fe.chunk.js": "/static/js/2.1ebc91fe.chunk.js",
-    "static/js/2.1ebc91fe.chunk.js.map": "/static/js/2.1ebc91fe.chunk.js.map",
+    "static/js/2.fb4e8f23.chunk.js": "/static/js/2.fb4e8f23.chunk.js",
+    "static/js/2.fb4e8f23.chunk.js.map": "/static/js/2.fb4e8f23.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2c2b718e9bcc8f88eb0951f4e9aeb535.js": "/precache-manifest.2c2b718e9bcc8f88eb0951f4e9aeb535.js",
+    "precache-manifest.b45ce2d6d96a294ad2eae35e8eba310e.js": "/precache-manifest.b45ce2d6d96a294ad2eae35e8eba310e.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.9de2e04a.chunk.css.map": "/static/css/2.9de2e04a.chunk.css.map",
-    "static/css/main.504d521a.chunk.css.map": "/static/css/main.504d521a.chunk.css.map",
-    "static/js/2.1ebc91fe.chunk.js.LICENSE.txt": "/static/js/2.1ebc91fe.chunk.js.LICENSE.txt",
+    "static/css/main.18b417a4.chunk.css.map": "/static/css/main.18b417a4.chunk.css.map",
+    "static/js/2.fb4e8f23.chunk.js.LICENSE.txt": "/static/js/2.fb4e8f23.chunk.js.LICENSE.txt",
     "static/media/25048.jpg": "/static/media/25048.71e25f07.jpg",
     "static/media/58341.jpg": "/static/media/58341.80557e6d.jpg",
     "static/media/Beach_Summer_Surfboard_Van_HD_Images.jpg": "/static/media/Beach_Summer_Surfboard_Van_HD_Images.8b994314.jpg",
@@ -35,10 +35,10 @@
     "static/media/wp2022155.jpg": "/static/media/wp2022155.fd39ed16.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.96dfc9c7.js",
+    "static/js/runtime-main.b3424a4b.js",
     "static/css/2.9de2e04a.chunk.css",
-    "static/js/2.1ebc91fe.chunk.js",
-    "static/css/main.504d521a.chunk.css",
-    "static/js/main.dee131cb.chunk.js"
+    "static/js/2.fb4e8f23.chunk.js",
+    "static/css/main.18b417a4.chunk.css",
+    "static/js/main.f61d2a95.chunk.js"
   ]
 }
