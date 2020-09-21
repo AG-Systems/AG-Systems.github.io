@@ -63,7 +63,6 @@ class Card extends React.Component {
     render() {
       const props = this.props;
       const data_list = props.data;
-
       if(data_list && data_list.length !== 0)
       {
             let data_cards = data_list.map(function(exp, index)
@@ -121,6 +120,8 @@ class Card extends React.Component {
                     <span>
                       { description_content }
                     </span>
+                    <div hidden={ (props.extra_html && props.extra_html !== "") ? true : false }>
+                    </div>
                   </div>
                   <div className="media-body border-bottom d-lg-none">
                     <h3 className="mt-0 dark-mode-card-title" style={{ fontSize: "16px", fontWeight: "600" }}>{ exp.title }</h3>

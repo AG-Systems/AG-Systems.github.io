@@ -69,7 +69,7 @@ class Education extends React.Component {
               "· Accounting 1A - Financial Accounting",
               "· Economics 1A - Macroeconomics",
               "· Photography 5 - Introduction to Photography",
-              "· Comm 4 - Group Communications",
+              "· Communications 4 - Group Communications",
               "· English 209 - Introduction to College Reading",
               "· English 110 - Introduction to College Writing",
               "· English 1A - Composition and Reading",

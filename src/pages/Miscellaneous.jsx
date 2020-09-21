@@ -34,20 +34,22 @@ class Miscellaneous extends React.Component {
             ],
             "extra": [],
             "tldr": "",
-            "media": []
+            "media": [],
+            "extra_html": ""
           },
           {
             "title": "Poker",
             "sub_title": "Personal",
             "location": "Las Vegas, NV",
-            "date_started": "July 2019",
+            "date_started": "Dec 2019",
             "date_ended": "Present",
             "img": require("../images/logos/poker.png"),
             "description": [
               "· Tripled bank roll",
             ],
             "tldr": "",
-            "media": []
+            "media": [],
+            "extra_html": ""
           },
         ];
   }

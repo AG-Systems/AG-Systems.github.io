@@ -11,19 +11,92 @@ import { changeDarkMode } from '../state/actions.js';
 
 
 const bg_images = [
-  require('../images/bg/wp2022155.jpg'),
-  require('../images/bg/shutterstock_674781376.0.jpg'),
-  require('../images/bg/photo-1533683083439-1a776a5653cb.jpg'),
-  require('../images/bg/25048.jpg'),
-  require("../images/bg/photo-1507041957456-9c397ce39c97.jpg"),
-  require("../images/bg/eb018d403fa9633f426fded17f843b73.jpg"),
-  require("../images/bg/bg_red.png"),
-  require("../images/bg/58341.jpg"),
-  require("../images/bg/photo_2020-03-27_10-59-58.jpg"),
-  require("../images/bg/lion.jpg"),
-  require("../images/bg/bear_valley.jpg"),
-  require("../images/bg/beach1.jpg"),
-  require("../images/bg/Beach_Summer_Surfboard_Van_HD_Images.jpg"),
+  {
+    img: require('../images/bg/wp2022155.jpg'),
+    style: "0% 0%"
+  },
+  {
+    img: require('../images/bg/shutterstock_674781376.0.jpg'),
+    style: "0% 0%"
+  },
+  {
+    img: require('../images/bg/wp2022155.jpg'),
+    style: "0% 0%"
+  },
+  {
+    img: require('../images/bg/photo-1533683083439-1a776a5653cb.jpg'),
+    style: "0% 0%"
+  },
+  {
+    img: require('../images/bg/25048.jpg'),
+    style: "0% 0%"
+  },
+  {
+    img: require('../images/bg/shutterstock_674781376.0.jpg'),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/photo-1507041957456-9c397ce39c97.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/eb018d403fa9633f426fded17f843b73.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/bg_red.png"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/58341.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require('../images/bg/wp2022155.jpg'),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/photo_2020-03-27_10-59-58.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/lion.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/bear_valley.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/beach1.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/Beach_Summer_Surfboard_Van_HD_Images.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/porsche-s-99x-electr-7_800x0w.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/118742116_4557493337626482_8978584120187536013_n.jpg"),
+    style: "50% 50%"
+  },
+  {
+    img: require("../images/bg/104485430_193939698613728_3350212393907244418_n.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/thumb-1920-363310.jpg"),
+    style: "0% 0%"
+  },
+  {
+    img: require("../images/bg/thumb-1920-458532.jpg"),
+    style: "40% 40%"
+  },
+
+
 ];
 
 class Navbar extends React.Component {
@@ -36,7 +109,9 @@ class Navbar extends React.Component {
     const cookies = new Cookies();
     if(!cookies.get('background_img_url'))
     {
-      cookies.set('background_img_url', bg_images[Math.floor(Math.random() * Math.floor(bg_images.length))]);
+      const bg = bg_images[Math.floor(Math.random() * Math.floor(bg_images.length))];
+      cookies.set('background_img_url', bg["img"]);
+      cookies.set('background_img_style', bg["style"]);
     }
 
 
@@ -58,12 +133,14 @@ class Navbar extends React.Component {
         this.changeDarkMode(this.props.dark_mode_props.dark_mode, true);
         this.state = {
           "background_img_url": cookies.get('background_img_url'),
+          "background_img_style": cookies.get('background_img_style'),
           "dark_mode": this.props.dark_mode_props.dark_mode
         };
       } else {
         this.changeDarkMode(false, true);
         this.state = {
           "background_img_url": cookies.get('background_img_url'),
+          "background_img_style": cookies.get('background_img_style'),
           "dark_mode": false
         };
       }
@@ -75,9 +152,12 @@ class Navbar extends React.Component {
   {
 
       const cookies = new Cookies();
-      cookies.set('background_img_url', bg_images[Math.floor(Math.random() * Math.floor(bg_images.length))]);
+      const bg = bg_images[Math.floor(Math.random() * Math.floor(bg_images.length))];
+      cookies.set('background_img_url', bg["img"]);
+      cookies.set('background_img_style', bg["style"]);
       this.setState({
-        "background_img_url": cookies.get('background_img_url')
+        "background_img_url": cookies.get('background_img_url'),
+        "background_img_style": cookies.get('background_img_style')
       });
       window.location.reload();
 
@@ -145,7 +225,14 @@ class Navbar extends React.Component {
 
 
   render() {
-
+    // console.log(this.state);
+    let background_img;
+    if(window.screen.width >= 1670)
+    {
+      background_img = "url(" + this.state["background_img_url"] + ")" + this.state["background_img_style"];
+    } else {
+      background_img = "url(" + this.state["background_img_url"] + ")";
+    }
 
 
     return (
@@ -153,7 +240,7 @@ class Navbar extends React.Component {
         <div style={{width: '100%', height: "10px"}}></div>
         <div className="card" style={{width: '45%', minWidth: "300px", margin: "0 auto"}} id="navbar-card">
           <i className="fas fa-redo" alt="Click on icon to refresh background image" style={{ zIndex: 5, position: "absolute", right: 0, padding: "10px", textShadow: "0 0 3px #000", color: "white" }} onClick={ this.refreshImage }></i>
-          <div className="card-img-top" style={{ background: "url(" + this.state["background_img_url"] + ")", height: "200px", backgroundSize: "cover" }}></div>
+          <div className="card-img-top" style={{ background: background_img, height: "200px", backgroundSize: "cover" }}></div>
           <div className="card-body">
             <img alt='' className='card-img-profile' src={ require("../images/profile/Wall-ESoundtrack.jpg") } style={{ height: "120px", width: "120px" }} />
             <h3 className="card-text" style={{ fontFamily: "Titillium Web", color: this.state["dark_mode"] ? "#f8f9fa" : "#1c1e20"}} >Max Chakhmatov</h3>
