@@ -22,6 +22,20 @@ class Miscellaneous extends React.Component {
   getMiscellaneous() {
     return [
           {
+            "title": "Electromechanical engineer",
+            "sub_title": "Formula Slug",
+            "location": "Santa Cruz, CA",
+            "date_started": "Oct 2020",
+            "date_ended": "Present",
+            "img": require("../images/logos/formulaslug.png"),
+            "description": [
+              "· Created internal documentation for engineering and logistics",
+            ],
+            "tldr": "",
+            "media": [],
+            "extra_html": ""
+          },
+          {
             "title": "Semi Professional Clash Royale Player",
             "sub_title": "Clash Royale - Supercell",
             "location": "",
