@@ -29,7 +29,9 @@ class Miscellaneous extends React.Component {
             "date_ended": "Present",
             "img": require("../images/logos/formulaslug.png"),
             "description": [
-              "· Created internal documentation for engineering and logistics",
+              "· Wrote documentation to assist new team members, and existing team members.",
+              "· Overhauled entire internal wiki for organization.",
+              "· In charge of onboarding new team members.",
             ],
             "tldr": "",
             "media": [],

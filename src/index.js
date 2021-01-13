@@ -35,7 +35,7 @@ ReactDOM.render(
               <Route exact path="/education" render={(props) => <Education {...props} /> } />
               <Route exact path="/miscellaneous" render={(props) => <Miscellaneous {...props} /> } />
               <Route exact path="/about" render={(props) => <About {...props} /> } />
-              <Route exact path="/skills" render={(props) => <Skills {...props} /> } />
+              {/* <Route exact path="/skills" render={(props) => <Skills {...props} /> } /> */}
               {/* <Route exact path="/more" render={(props) => <More {...props} /> } /> */}
 
           </div>
