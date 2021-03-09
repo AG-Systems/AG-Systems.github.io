@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
-import { Link, Switch, Route } from 'react-router-dom';
+import { Link, Switch, Route, Redirect } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import site_state from './state/reducers.js';
@@ -35,6 +35,7 @@ ReactDOM.render(
               <Route exact path="/education" render={(props) => <Education {...props} /> } />
               <Route exact path="/miscellaneous" render={(props) => <Miscellaneous {...props} /> } />
               <Route exact path="/about" render={(props) => <About {...props} /> } />
+              <Redirect from='/index.html' to="/" />
               {/* <Route exact path="/skills" render={(props) => <Skills {...props} /> } /> */}
               {/* <Route exact path="/more" render={(props) => <More {...props} /> } /> */}
 

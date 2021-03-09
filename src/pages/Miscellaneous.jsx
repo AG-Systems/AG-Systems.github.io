@@ -22,7 +22,7 @@ class Miscellaneous extends React.Component {
   getMiscellaneous() {
     return [
           {
-            "title": "Electromechanical engineer",
+            "title": "Team member",
             "sub_title": "Formula Slug",
             "location": "Santa Cruz, CA",
             "date_started": "Oct 2020",
@@ -42,7 +42,7 @@ class Miscellaneous extends React.Component {
             "sub_title": "Clash Royale - Supercell",
             "location": "",
             "date_started": "Nov 2017",
-            "date_ended": "Present",
+            "date_ended": "Mar 2021",
             "img": require("../images/logos/clashroyale.png"),
             "description": [
               "· Best season elo: 5609 (master 3)",

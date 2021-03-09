@@ -51,7 +51,7 @@ getExperience() {
           "date_ended": "Aug 2020",
           "img": require("../images/logos/walmartlabs.png"),
           "description": [
-            "• I technically work for both, eCommerce and labs",
+            "• I technically work for both, Walmart eCommerce and Walmart labs (now is called Global Tech)",
           ],
           "tldr": "",
           "media": []

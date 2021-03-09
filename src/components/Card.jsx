@@ -97,20 +97,22 @@ class Card extends React.Component {
               }
 
               let description_content = [];
-              description_content.push(<br key={ hash("desktop-" + exp.date_started + index + Math.floor(Math.random() * Math.floor(1000))) } />);
+              // description_content.push(<br key={ hash("desktop-" + exp.date_started + index + Math.floor(Math.random() * Math.floor(1000))) } />);
+              description_content.push(<div style={{ width: "100%", height: "6px" }}></div>);
               for (let value of data_list[index].description) {
                 description_content.push(<span className="dark-mode-card-desc" key={ hash("desktop-" + exp.date_ended + index + Math.floor(Math.random() * Math.floor(1000)))}> { value } </span>);
                 description_content.push(<br key={ hash("desktop-" + exp.date_ended + index + Math.floor(Math.random() * Math.floor(1000))) } />);
               }
-              description_content.push(<br key={ hash("desktop-" + exp.date_ended + index + Math.floor(Math.random() * Math.floor(1000))) } />);
+              // description_content.push(<br key={ hash("desktop-" + exp.date_ended + index + Math.floor(Math.random() * Math.floor(1000))) } />);
+              description_content.push(<div style={{ width: "100%", height: "15px" }}></div>);
 
               return (
                 <div className="media mt-5" key={ hash("desktop-" + exp.date_ended + index + Math.floor(Math.random() * Math.floor(1000))) + exp.index }>
-                  <img src={ exp.img } className="mr-3 d-none d-lg-block" alt="..." />
+                  <img src={ exp.img } className="mr-3 d-none d-lg-block" height="56" width="56" alt="..." />
                   <img src={ exp.img } className="mr-3 d-lg-none" alt="..." height="45" width="45" />
                   <div className="media-body border-bottom d-none d-lg-block">
                     <h3 className="mt-0" style={{ fontSize: "1.2rem" }}>{ exp.title }</h3>
-                    <p style={{ fontFamily: "Titillium Web" }}>
+                    <p style={{ fontFamily: "Titillium Web", marginBottom: "0px" }}>
                         <span className="card-sub" style={{ fontWeight: "400" }}>{ exp.sub_title }</span>
                         <br/>
                         { date_element }
