@@ -649,3 +649,15 @@ html {
 .software-icon-name {
     padding: 0 0.9375rem;
 }
+
+#background_img:hover {
+  height: 500px !important;
+  transition: height 0.4s;
+  transition-timing-function: ease;
+}
+
+#background_img {
+  height: 200px !important;
+  transition: height 0.4s;
+  transition-timing-function: ease;
+}

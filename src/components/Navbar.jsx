@@ -8,6 +8,10 @@ import Toggle from 'react-toggle'
 import "react-toggle/style.css"
 import { connect } from 'react-redux';
 import { changeDarkMode } from '../state/actions.js';
+import Carousel, { Dots } from '@brainhubeu/react-carousel';
+import '@brainhubeu/react-carousel/lib/style.css';
+import ExpandCollapse from 'react-expand-collapse';
+import FadeIn from 'react-fade-in';
 
 
 const bg_images = [
@@ -104,7 +108,10 @@ class Navbar extends React.Component {
   {
     super(props);
 
-
+    this.state = { value: 0, is_hovering: false, bio_expand: false };
+    this.onChange = this.onChange.bind(this);
+    this.changeHover = this.changeHover.bind(this);
+    this.changeBio = this.changeBio.bind(this);
 
     const cookies = new Cookies();
     if(!cookies.get('background_img_url'))
@@ -148,6 +155,20 @@ class Navbar extends React.Component {
 
   }
 
+  onChange(value) {
+    this.setState({ value, is_hovering: false });
+  }
+
+  changeHover(value)
+  {
+    this.setState({ is_hovering: value });
+  }
+
+  changeBio(value)
+  {
+    this.setState({ bio_expand: value });
+  }
+
   refreshImage()
   {
 
@@ -180,6 +201,8 @@ class Navbar extends React.Component {
           $(".card-date").css("color","rgba(226, 226, 226, 0.6)");
           $(".card-location").css("color", "rgba(245, 245, 245, 0.6)");
 
+          $(".navbar-cards").addClass("bg-dark text-white");
+          $(".list-group-item").addClass("bg-dark text-white");
           if(!mounting)
           {
             this.setState({
@@ -203,6 +226,8 @@ class Navbar extends React.Component {
         $(".card-date").css("color","rgba(0, 0, 0, 0.6)");
         $(".card-location").css("color", "rgba(0, 0, 0, 0.6)");
 
+        $(".navbar-cards").removeClass("bg-dark text-white");
+        $(".list-group-item").removeClass("bg-dark text-white");
         if(!mounting)
         {
           this.setState({
@@ -223,6 +248,22 @@ class Navbar extends React.Component {
     this.props.changeDarkMode(this.state["dark_mode"]);
   }
 
+  componentDidMount()
+  {
+    if(this.props.dark_mode_props)
+    {
+
+      $(".navbar-cards").addClass("bg-dark text-white");
+      $(".list-group-item").addClass("bg-dark text-white");
+
+      } else {
+
+      $(".navbar-cards").removeClass("bg-dark text-white");
+      $(".list-group-item").removeClass("bg-dark text-white");
+
+      }
+  }
+
 
   render() {
     // console.log(this.state);
@@ -240,21 +281,154 @@ class Navbar extends React.Component {
         <div style={{width: '100%', height: "10px"}}></div>
         <div className="card" style={{width: '45%', minWidth: "300px", margin: "0 auto"}} id="navbar-card">
           <i className="fas fa-redo" alt="Click on icon to refresh background image" style={{ zIndex: 5, position: "absolute", right: 0, padding: "10px", textShadow: "0 0 3px #000", color: "white" }} onClick={ this.refreshImage }></i>
-          <div className="card-img-top" style={{ background: background_img, height: "200px", backgroundSize: "cover" }}></div>
+          <div className="card-img-top" style={{ background: background_img, height: "200px", backgroundSize: "cover" }} id="background_img"></div>
           <div className="card-body">
             <img alt='' className='card-img-profile' src={ require("../images/profile/Wall-ESoundtrack.jpg") } style={{ height: "120px", width: "120px" }} />
             <h3 className="card-text" style={{ fontFamily: "Titillium Web", color: this.state["dark_mode"] ? "#f8f9fa" : "#1c1e20"}} >Max Chakhmatov</h3>
             <a href={process.env.PUBLIC_URL + '/Max_Chakhmatov_resume.pdf'} className="btn btn-mycolor"> Resume </a>
             <br/>
             <br/>
-            <p>
               <span className="dark-mode">
-                Nerdy person who has a lot of drive. <br/>
+                In short: I'm a passionate learner who is a engineer (software, mechanical, & hardware) who loves surfing🌊, and robotics🦾. <br/>
+                My career interests are: robotics, self-driving vehicles, manufacturing, mining, and electric Vehicles.
               </span>
+              <p style={{ color: "#1fd19b" }}
+              onMouseEnter={() => this.changeBio(true)}
+              onMouseLeave={() => this.changeBio(false)}
+              > { this.state.bio_expand ? "Expanded..." : "Read more" } </p>
+              {this.state.bio_expand &&
+                  <FadeIn>
+                    <p>
+                    Born and raised in California, I am currently studying robotics engineering at University of California, Santa Cruz. I might be a college student right now, but I have always been a student in life and planning to continue learning.
+                    I love learning everything and anything.
+                    </p>
+                  </FadeIn>
+              }
+
+
+              <br/>
+              <div className="d-none d-lg-block mb-5"></div>
+              <Carousel
+                value={this.state.value}
+                onChange={this.onChange}
+                // slidesPerPage={ ( window.screen.width > 1325 ? ( this.state.is_hovering ? 1 : 2) : ( window.screen.width > 900 ? ( this.state.is_hovering ? 1 : 2 ) : 1 ) )}
+                slidesPerPage={ ( window.screen.width > 1325 ? 2 : ( window.screen.width > 900 ? 2 : 1 ) )}
+                infinite
+                // autoPlay={ 4000 }
+                animationSpeed={1000}
+              >
+
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "auto" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
+              onMouseEnter={() => this.changeHover(true)}
+              // onMouseLeave={() => this.changeHover(false)}
+              >
+                <div className="row no-gutters" style={{ height: "100%" }}>
+                  <div className="col-md-4">
+                    <img src={"https://www.hpsarch.com/sites/default/files/styles/lg_16_9/public/2019-10/UCSC2_0.jpg?itok=Qes1XJRX"} className="card-img" alt="..." style={{ objectFit: "cover", height: "100%", width: "100%" }} />
+                  </div>
+                  <div className="col-md-8">
+                    <div className="card-body">
+                      <h6 className="card-text">Student</h6>
+                      <p className="card-text">Robotics Engineering <br/> University of California, Santa Cruz</p>
+                    </div>
+                    <ul className="list-group list-group-flush">
+                      <li className="list-group-item"> <img src={require("../images/logos/ucsc_engineering.png")} height={30} width={30} alt="..." /> UCSC </li>
+                      <li className="list-group-item"> <img src={require("../images/logos/foothill.png")} height={30} width={30} alt="..." /> Foothill</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "auto" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
+              onMouseEnter={() => this.changeHover(true)}
+              //onMouseLeave={() => this.changeHover(false)}
+              >
+                <div className="row no-gutters" style={{ height: "100%" }}>
+                  <div className="col-md-4">
+                    <img src={"https://www.itl.cat/pngfile/big/312-3120458_silicon-valley.jpg"} className="card-img" alt="..." style={{ objectFit: "cover", height: "100%", width: "100%" }} />
+                  </div>
+                  <div className="col-md-8">
+                    <div className="card-body">
+                      <h6 className="card-text">Software Engineering</h6>
+                      <p className="card-text">Full stack development, and mobile app development</p>
+                    </div>
+                      <ul className="list-group list-group-flush">
+                        <li className="list-group-item"> <img src={require("../images/logos/walmart.jfif")} height={30} width={30} alt="..." /> Walmart </li>
+                        <li className="list-group-item"> <img src={require("../images/logos/fireflies.jpg")} height={30} width={30} alt="..." /> Fireflies.ai </li>
+                        <li className="list-group-item"> <img src={require("../images/logos/quesgen.png")} height={30} width={30} alt="..." /> QuesGen </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "auto" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
+              onMouseEnter={() => this.changeHover(true)}
+              //onMouseLeave={() => this.changeHover(false)}
+              >
+                <div className="row no-gutters" style={{ height: "100%" }}>
+                  <div className="col-md-4">
+                    <img src={"https://cdnb.artstation.com/p/assets/images/images/013/054/443/large/gregor-kopka-arm6.jpg?1537853559"} className="card-img" alt="..." style={{ objectFit: "cover", height: "100%", width: "100%", backgroundPosition: "0% 0%" }} />
+                  </div>
+                  <div className="col-md-8" style={{ height: "100%"}}>
+                    <div className="card-body">
+                      <h6 className="card-text">Mechanical Engineering</h6>
+                      <p className="card-text">Mechatronics</p>
+                      <p className="card-text"></p>
+                    </div>
+
+                      <ul className="list-group list-group-flush">
+                        <li className="list-group-item"> <img src={require("../images/logos/barrick.jfif")} height={30} width={30} alt="..." /> Barrick</li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "auto" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
+              onMouseEnter={() => this.changeHover(true)}
+              //onMouseLeave={() => this.changeHover(false)}
+              >
+                <div className="row no-gutters" style={{ height: "100%" }}>
+                  <div className="col-md-4">
+                    <img src={"https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f285681289af0e7316b841b%2F0x0.jpg"} className="card-img" alt="..." style={{ objectFit: "cover", height: "100%", width: "100%", backgroundPosition: "0% 0%" }} />
+                  </div>
+                  <div className="col-md-8" style={{ height: "100%"}}>
+                    <div className="card-body">
+                      <h6 className="card-text">Entrepreneurship</h6>
+                      <p className="card-text">Built technology based companies</p>
+                    </div>
+
+                      <ul className="list-group list-group-flush">
+                        <li className="list-group-item"> <img src={require("../images/logos/chronoci.jpg")} height={30} width={30} alt="..." /> ChronoCI</li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "auto" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
+              onMouseEnter={() => this.changeHover(true)}
+              //onMouseLeave={() => this.changeHover(false)}
+              >
+                <div className="row no-gutters" style={{ height: "100%" }}>
+                  <div className="col-md-4">
+                    <img src={require("../images/bg/surf.jpg")} className="card-img" alt="..." style={{ objectFit: "cover", height: "100%", width: "100%", backgroundPosition: "0% 0%" }} />
+                  </div>
+                  <div className="col-md-8" style={{ height: "100%"}}>
+                    <div className="card-body">
+                      <h6 className="card-text">Surfing</h6>
+                      <p className="card-text">Fun hobby</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              </Carousel>
               <span style={{ color: "#6e767d" }}>
-                  <i className="fas fa-map-marker-alt"></i> Planet earth
+                  <i className="fas fa-map-marker-alt"></i> Planet earth & hopefully one day, Mars
               </span>
-            </p>
+
 
 
             {/*
@@ -287,7 +461,7 @@ class Navbar extends React.Component {
                 icons={false}
                 onChange={ this.handleClick } />
               <br/>
-              <span style={{ fontSize: "13px", color: "rgb(110, 118, 125)" }}>ps: dark mode is automatically enabled by time of day </span>
+              {/* <span style={{ fontSize: "13px", color: "rgb(110, 118, 125)" }}>ps: dark mode is automatically enabled by time of day </span> */}
             </div>
 
             <div className="footer-copyright py-3">

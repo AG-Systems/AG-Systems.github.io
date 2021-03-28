@@ -1,3 +1,14 @@
+Make sure you are on the correct branch (source_code)
+
+push changes to source code then run `$ yarn run deploy`
+
+
+
+
+<br/>
+<br/>
+<br/>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
