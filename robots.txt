@@ -1,2 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Disallow: /Max_Chakhmatov_resume.pdf
+Disallow: /archive*
