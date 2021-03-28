@@ -252,16 +252,15 @@ class Navbar extends React.Component {
   {
     if(this.props.dark_mode_props)
     {
-
-      $(".navbar-cards").addClass("bg-dark text-white");
-      $(".list-group-item").addClass("bg-dark text-white");
-
+      if(this.props.dark_mode_props.dark_mode)
+      {
+        $(".navbar-cards").addClass("bg-dark text-white");
+        $(".list-group-item").addClass("bg-dark text-white");
       } else {
-
-      $(".navbar-cards").removeClass("bg-dark text-white");
-      $(".list-group-item").removeClass("bg-dark text-white");
-
+        $(".navbar-cards").removeClass("bg-dark text-white");
+        $(".list-group-item").removeClass("bg-dark text-white");
       }
+    }
   }
 
 
