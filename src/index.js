@@ -21,7 +21,7 @@ let dark_mode_initial = new Date().getHours() >= 21 || new Date().getHours() <= 
 const store = createStore(
     site_state, // reducers
     {
-      dark_mode: !dark_mode_initial
+      dark_mode: dark_mode_initial
     }
 );
 
