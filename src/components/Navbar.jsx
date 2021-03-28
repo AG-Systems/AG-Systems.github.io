@@ -313,7 +313,7 @@ class Navbar extends React.Component {
                 // slidesPerPage={ ( window.screen.width > 1325 ? ( this.state.is_hovering ? 1 : 2) : ( window.screen.width > 900 ? ( this.state.is_hovering ? 1 : 2 ) : 1 ) )}
                 slidesPerPage={ ( window.screen.width > 1325 ? 2 : ( window.screen.width > 900 ? 2 : 1 ) )}
                 infinite
-                // autoPlay={ 4000 }
+                autoPlay={ 4000 }
                 animationSpeed={1000}
               >
 
