@@ -288,8 +288,8 @@ class Navbar extends React.Component {
             <br/>
             <br/>
               <span className="dark-mode">
-                In short: I'm a passionate learner who is a engineer (software, mechanical, & hardware) who loves surfing🌊, and robotics🦾. <br/>
-                My career interests are: robotics, self-driving vehicles, manufacturing, mining, and electric Vehicles.
+                In short: I'm a passionate learner who is a engineer (software, mechanical, & hardware) who likes surfing🌊, and robotics🦾. <br/>
+                My career interests are: robotics, self-driving vehicles, manufacturing, mining, and electric vehicles.
               </span>
               <p style={{ color: "#1fd19b" }}
               onMouseEnter={() => this.changeBio(true)}
@@ -311,19 +311,19 @@ class Navbar extends React.Component {
                 value={this.state.value}
                 onChange={this.onChange}
                 // slidesPerPage={ ( window.screen.width > 1325 ? ( this.state.is_hovering ? 1 : 2) : ( window.screen.width > 900 ? ( this.state.is_hovering ? 1 : 2 ) : 1 ) )}
-                slidesPerPage={ ( window.screen.width > 1325 ? 2 : ( window.screen.width > 900 ? 2 : 1 ) )}
+                slidesPerPage={ ( window.screen.width > 1325 ? 2 : ( window.screen.width > 1094 ? 1 : 1 ) )}
                 infinite
                 autoPlay={ 4000 }
                 animationSpeed={1000}
               >
 
-              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "auto" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
               onMouseEnter={() => this.changeHover(true)}
               // onMouseLeave={() => this.changeHover(false)}
               >
                 <div className="row no-gutters" style={{ height: "100%" }}>
                   <div className="col-md-4">
-                    <img src={"https://www.hpsarch.com/sites/default/files/styles/lg_16_9/public/2019-10/UCSC2_0.jpg?itok=Qes1XJRX"} className="card-img" alt="..." style={{ objectFit: "cover", height: "100%", width: "100%" }} />
+                    <img src={"https://www.hpsarch.com/sites/default/files/styles/lg_16_9/public/2019-10/UCSC2_0.jpg?itok=Qes1XJRX"} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%" }} />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
@@ -338,13 +338,13 @@ class Navbar extends React.Component {
                 </div>
               </div>
 
-              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "auto" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
               onMouseEnter={() => this.changeHover(true)}
               //onMouseLeave={() => this.changeHover(false)}
               >
                 <div className="row no-gutters" style={{ height: "100%" }}>
                   <div className="col-md-4">
-                    <img src={"https://www.itl.cat/pngfile/big/312-3120458_silicon-valley.jpg"} className="card-img" alt="..." style={{ objectFit: "cover", height: "100%", width: "100%" }} />
+                    <img src={"https://www.itl.cat/pngfile/big/312-3120458_silicon-valley.jpg"} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%" }} />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
@@ -360,13 +360,13 @@ class Navbar extends React.Component {
                 </div>
               </div>
 
-              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "auto" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
               onMouseEnter={() => this.changeHover(true)}
               //onMouseLeave={() => this.changeHover(false)}
               >
                 <div className="row no-gutters" style={{ height: "100%" }}>
                   <div className="col-md-4">
-                    <img src={"https://cdnb.artstation.com/p/assets/images/images/013/054/443/large/gregor-kopka-arm6.jpg?1537853559"} className="card-img" alt="..." style={{ objectFit: "cover", height: "100%", width: "100%", backgroundPosition: "0% 0%" }} />
+                    <img src={"https://cdnb.artstation.com/p/assets/images/images/013/054/443/large/gregor-kopka-arm6.jpg?1537853559"} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
                   </div>
                   <div className="col-md-8" style={{ height: "100%"}}>
                     <div className="card-body">
@@ -382,13 +382,13 @@ class Navbar extends React.Component {
                 </div>
               </div>
 
-              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "auto" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
               onMouseEnter={() => this.changeHover(true)}
               //onMouseLeave={() => this.changeHover(false)}
               >
                 <div className="row no-gutters" style={{ height: "100%" }}>
                   <div className="col-md-4">
-                    <img src={"https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f285681289af0e7316b841b%2F0x0.jpg"} className="card-img" alt="..." style={{ objectFit: "cover", height: "100%", width: "100%", backgroundPosition: "0% 0%" }} />
+                    <img src={"https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f285681289af0e7316b841b%2F0x0.jpg"} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
                   </div>
                   <div className="col-md-8" style={{ height: "100%"}}>
                     <div className="card-body">
@@ -403,13 +403,13 @@ class Navbar extends React.Component {
                 </div>
               </div>
 
-              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "auto" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
               onMouseEnter={() => this.changeHover(true)}
               //onMouseLeave={() => this.changeHover(false)}
               >
                 <div className="row no-gutters" style={{ height: "100%" }}>
                   <div className="col-md-4">
-                    <img src={require("../images/bg/surf.jpg")} className="card-img" alt="..." style={{ objectFit: "cover", height: "100%", width: "100%", backgroundPosition: "0% 0%" }} />
+                    <img src={require("../images/bg/surf.jpg")} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
                   </div>
                   <div className="col-md-8" style={{ height: "100%"}}>
                     <div className="card-body">
