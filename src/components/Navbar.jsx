@@ -317,7 +317,7 @@ class Navbar extends React.Component {
                 animationSpeed={1000}
               >
 
-              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "340px" : ( window.screen.width > 900 ? "340px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
               onMouseEnter={() => this.changeHover(true)}
               // onMouseLeave={() => this.changeHover(false)}
               >
@@ -327,7 +327,7 @@ class Navbar extends React.Component {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h6 className="card-text">Student</h6>
+                      <h6 className="card-text" style={{ fontWeight: "600" }}>Student</h6>
                       <p className="card-text">Robotics Engineering <br/> University of California, Santa Cruz</p>
                     </div>
                     <ul className="list-group list-group-flush">
@@ -338,7 +338,7 @@ class Navbar extends React.Component {
                 </div>
               </div>
 
-              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "340px" : ( window.screen.width > 900 ? "340px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
               onMouseEnter={() => this.changeHover(true)}
               //onMouseLeave={() => this.changeHover(false)}
               >
@@ -348,7 +348,7 @@ class Navbar extends React.Component {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                      <h6 className="card-text">Software Engineering</h6>
+                      <h6 className="card-text" style={{ fontWeight: "600" }}>Software Engineering</h6>
                       <p className="card-text">Full stack development, and mobile app development</p>
                     </div>
                       <ul className="list-group list-group-flush">
@@ -360,7 +360,7 @@ class Navbar extends React.Component {
                 </div>
               </div>
 
-              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "340px" : ( window.screen.width > 900 ? "340px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
               onMouseEnter={() => this.changeHover(true)}
               //onMouseLeave={() => this.changeHover(false)}
               >
@@ -370,7 +370,7 @@ class Navbar extends React.Component {
                   </div>
                   <div className="col-md-8" style={{ height: "100%"}}>
                     <div className="card-body">
-                      <h6 className="card-text">Mechanical Engineering</h6>
+                      <h6 className="card-text" style={{ fontWeight: "600" }}>Mechanical Engineering</h6>
                       <p className="card-text">Mechatronics</p>
                       <p className="card-text"></p>
                     </div>
@@ -382,7 +382,7 @@ class Navbar extends React.Component {
                 </div>
               </div>
 
-              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "340px" : ( window.screen.width > 900 ? "340px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
               onMouseEnter={() => this.changeHover(true)}
               //onMouseLeave={() => this.changeHover(false)}
               >
@@ -392,7 +392,7 @@ class Navbar extends React.Component {
                   </div>
                   <div className="col-md-8" style={{ height: "100%"}}>
                     <div className="card-body">
-                      <h6 className="card-text">Entrepreneurship</h6>
+                      <h6 className="card-text" style={{ fontWeight: "600" }}>Entrepreneurship</h6>
                       <p className="card-text">Built technology based companies</p>
                     </div>
 
@@ -403,7 +403,7 @@ class Navbar extends React.Component {
                 </div>
               </div>
 
-              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "300px" : ( window.screen.width > 900 ? "300px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "340px" : ( window.screen.width > 900 ? "340px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
               onMouseEnter={() => this.changeHover(true)}
               //onMouseLeave={() => this.changeHover(false)}
               >
@@ -413,7 +413,7 @@ class Navbar extends React.Component {
                   </div>
                   <div className="col-md-8" style={{ height: "100%"}}>
                     <div className="card-body">
-                      <h6 className="card-text">Surfing</h6>
+                      <h6 className="card-text" style={{ fontWeight: "600" }}>Surfing</h6>
                       <p className="card-text">Fun hobby</p>
                     </div>
                   </div>

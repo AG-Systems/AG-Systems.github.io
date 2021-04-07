@@ -40,9 +40,10 @@ class Miscellaneous extends React.Component {
           {
             "title": "Semi Professional Clash Royale Player",
             "sub_title": "Clash Royale - Supercell",
-            "location": "",
+            "location": "Planet Earth",
             "date_started": "Nov 2017",
             "date_ended": "Mar 2021",
+            "total_length": "3 Years 5 Months",
             "img": require("../images/logos/clashroyale.png"),
             "description": [
               "· Best season elo: 5609 (master 3)",

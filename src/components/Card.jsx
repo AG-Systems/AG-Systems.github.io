@@ -76,25 +76,31 @@ class Card extends React.Component {
               }
 
               let date_element = "";
-              if(difference_months >= 12)
+              if(exp.date_ended == "Present" || ( exp.total_length === null || exp.total_length === "" || exp.total_length === undefined ))
               {
-                let years = 0;
-                let months = 0;
-                while(difference_months >= 12)
+                if(difference_months >= 12)
                 {
-                  years += 1;
-                  difference_months = difference_months - 12;
-                }
-                months = difference_months;
-                if(months > 0)
-                {
-                  date_element = <span className="card-date" style={{ color: props.dark_mode_props ? "rgba(226, 226, 226, 0.6)" : "rgba(0, 0, 0, 0.6)" }} > { exp.date_started } - { exp.date_ended } • { years } { years > 1 ? "Years" : "Year" } { difference_months } { difference_months > 1 ? "Months" : "Month" } </span>;
+                  let years = 0;
+                  let months = 0;
+                  while(difference_months >= 12)
+                  {
+                    years += 1;
+                    difference_months = difference_months - 12;
+                  }
+                  months = difference_months;
+                  if(months > 0)
+                  {
+                    date_element = <span className="card-date" style={{ color: props.dark_mode_props ? "rgba(226, 226, 226, 0.6)" : "rgba(0, 0, 0, 0.6)" }} > { exp.date_started } - { exp.date_ended } • { years } { years > 1 ? "Years" : "Year" } { difference_months } { difference_months > 1 ? "Months" : "Month" } </span>;
+                  } else {
+                    date_element = <span className="card-date" style={{ color: props.dark_mode_props ? "rgba(226, 226, 226, 0.6)" : "rgba(0, 0, 0, 0.6)" }} > { exp.date_started } - { exp.date_ended } • { years } { years > 1 ? "Years" : "Year" } </span>;
+                  }
                 } else {
-                  date_element = <span className="card-date" style={{ color: props.dark_mode_props ? "rgba(226, 226, 226, 0.6)" : "rgba(0, 0, 0, 0.6)" }} > { exp.date_started } - { exp.date_ended } • { years } { years > 1 ? "Years" : "Year" } </span>;
+                  date_element = <span className="card-date" style={{ color: props.dark_mode_props ? "rgba(226, 226, 226, 0.6)" : "rgba(0, 0, 0, 0.6)" }} > { exp.date_started } - { exp.date_ended } • { difference_months } { difference_months > 1 ? "Months" : "Month" } </span>;
                 }
               } else {
-                date_element = <span className="card-date" style={{ color: props.dark_mode_props ? "rgba(226, 226, 226, 0.6)" : "rgba(0, 0, 0, 0.6)" }} > { exp.date_started } - { exp.date_ended } • { difference_months } { difference_months > 1 ? "Months" : "Month" } </span>;
+                date_element = <span className="card-date" style={{ color: props.dark_mode_props ? "rgba(226, 226, 226, 0.6)" : "rgba(0, 0, 0, 0.6)" }} > { exp.date_started } - { exp.date_ended } • { exp.total_length } </span>;
               }
+
 
               let description_content = [];
               // description_content.push(<br key={ hash("desktop-" + exp.date_started + index + Math.floor(Math.random() * Math.floor(1000))) } />);

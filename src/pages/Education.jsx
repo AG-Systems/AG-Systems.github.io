@@ -51,6 +51,7 @@ class Education extends React.Component {
             "location": "Los Altos, CA",
             "date_started": "July 2017",
             "date_ended": "June 2020",
+            "total_length": "3 Years",
             "img": require("../images/logos/foothill.png"),
             "description": [
               "Activities: ",

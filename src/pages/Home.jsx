@@ -33,6 +33,7 @@ getExperience() {
           "location": "Sunnyvale, CA",
           "date_started": "Jun 2020",
           "date_ended": "Aug 2020",
+          "total_length": "3 Months",
           "img": require("../images/logos/walmart.jfif"),
           "description": [
             "• Built mobile app using React Native (Typescript, and Redux) for internal testing",
@@ -49,6 +50,7 @@ getExperience() {
           "location": "San Bruno, CA",
           "date_started": "Jun 2020",
           "date_ended": "Aug 2020",
+          "total_length": "3 Months",
           "img": require("../images/logos/walmartlabs.png"),
           "description": [
             "• I technically work for both, Walmart eCommerce and Walmart labs (now is called Global Tech)",
@@ -62,6 +64,7 @@ getExperience() {
           "location": "Los Altos Hills, CA",
           "date_started": "Jun 2020",
           "date_ended": "Aug 2020",
+          "total_length": "3 Months",
           "img": require("../images/logos/foothill.png"),
           "description": [
             "• Class: Physics 4B (Electricity & Magnetism)",
@@ -79,6 +82,7 @@ getExperience() {
           "location": "Burlingame, CA",
           "date_started": "Oct 2019",
           "date_ended": "Jun 2020",
+          "total_length": "9 Months",
           "img": require("../images/logos/quesgen.png"),
           "description": [
             "• Built internal full-fledged mobile app with flutter, redux, and dart",
@@ -98,6 +102,7 @@ getExperience() {
           "location": "Los Altos Hills, CA",
           "date_started": "Sep 2019",
           "date_ended": "Dec 2019",
+          "total_length": "4 Months",
           "img": require("../images/logos/foothill.png"),
           "description": [
             "• Tutored Precalculus (MATH 48A) for pass the torch program"
@@ -111,6 +116,7 @@ getExperience() {
           "location": "N/A",
           "date_started": "Jul 2019",
           "date_ended": "Nov 2019",
+          "total_length": "5 Months",
           "img": require("../images/logos/no_logo.png"),
           "description": [
             "• Taught the basics of programming for various high school students",
@@ -122,9 +128,10 @@ getExperience() {
         {
           "title": "Founder",
           "sub_title": "ChronoCI",
-          "location": "Bay Area",
+          "location": "Bay Area, CA",
           "date_started": "May 2018",
           "date_ended": "April 2019",
+          "total_length": "1 Year",
           "img": require("../images/logos/chronoci.jpg"),
           "description": [
             "• Built a platform for testing web applications for security vulnerabilities.",
@@ -141,6 +148,7 @@ getExperience() {
           "location": "Remote",
           "date_started": "Jul 2018",
           "date_ended": "Oct 2018",
+          "total_length": "4 Months",
           "img": require("../images/logos/mindsight.png"),
           "description": [
             "• Created unit and end to end tests for the dashboard with Jest, and Cypress",
@@ -158,6 +166,7 @@ getExperience() {
           "location": "Cuptertino, CA",
           "date_started": "Jul 2018",
           "date_ended": "Sep 2018",
+          "total_length": "3 Months",
           "img": require("../images/logos/sfshakes.png"),
           "description": [
           ],
@@ -170,6 +179,7 @@ getExperience() {
           "location": "San Fransisco, CA",
           "date_started": "Jan 2018",
           "date_ended": "Jul 2018",
+          "total_length": "7 Months",
           "img": require("../images/logos/fireflies.jpg"),
           "description": [
             "• Completely redesigned user interface with React.",
@@ -185,9 +195,10 @@ getExperience() {
         {
           "title": "Founder",
           "sub_title": "PixelML",
-          "location": "Bay Area",
+          "location": "Bay Area, CA",
           "date_started": "May 2017",
           "date_ended": "Aug 2017",
+          "total_length": "4 Months",
           "img": require("../images/logos/no_logo.png"),
           "description": [
             "• Attempted to build a service for businesses to evaluate the effectiveness of online advertisements.",
@@ -202,9 +213,10 @@ getExperience() {
         {
           "title": "Founder",
           "sub_title": "ConfidentMindset",
-          "location": "Bay Area",
+          "location": "Bay Area, CA",
           "date_started": "Oct 2016",
           "date_ended": "Dec 2016",
+          "total_length": "3 Months",
           "img": require("../images/logos/no_logo.png"),
           "description": [
           ],
@@ -214,9 +226,10 @@ getExperience() {
         {
           "title": "Programming Instructor",
           "sub_title": "theCoderSchool",
-          "location": "San Mateo",
+          "location": "San Mateo, CA",
           "date_started": "Sep 2016",
           "date_ended": "Feb 2018",
+          "total_length": "1 Year 6 Months",
           "img": require("../images/logos/thecoderschool.png"),
           "description": [
             "• Taught kids ages 7 to 15 coding skills through project-based learning.",
@@ -230,9 +243,10 @@ getExperience() {
         {
           "title": "Assistant",
           "sub_title": "Swivl",
-          "location": "San Carlos",
+          "location": "San Carlos, CA",
           "date_started": "May 2016",
           "date_ended": "Jul 2016",
+          "total_length": "3 Months",
           "img": require("../images/logos/swivl.png"),
           "description": [
               "• Helped packing boxes, and program units"
