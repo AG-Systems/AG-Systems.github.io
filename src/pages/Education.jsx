@@ -34,7 +34,7 @@ class Education extends React.Component {
               "· Computer Science Engineering 100/L - Logic Design",
               "· Computer Science Engineering 101 - Data structures and Algorithms",
               "· Electrical Computer Engineering 9 - Statics and Mechanics of Materials",
-              "· Electrical Computer Engineering 10 - Dynamics",
+              "· Electrical Computer Engineering 10 - Robot Dynamics",
               "· Electrical Computer Engineering 101/L - Introduction to Electronic Circuits",
               "· Electrical Computer Engineering 103/L - Signals and Systems",
               "General Education: ",

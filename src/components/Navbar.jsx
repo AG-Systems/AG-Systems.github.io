@@ -289,7 +289,6 @@ class Navbar extends React.Component {
             <br/>
               <span className="dark-mode">
                 In short: I'm a passionate learner who is a engineer (software, mechanical, & hardware) who likes surfing🌊, and robotics🦾. <br/>
-                My career interests are: robotics, self-driving vehicles, manufacturing, mining, and electric vehicles.
               </span>
               <p style={{ color: "#1fd19b" }}
               onMouseEnter={() => this.changeBio(true)}
@@ -301,6 +300,113 @@ class Navbar extends React.Component {
                     Born and raised in California, I am currently studying robotics engineering at University of California, Santa Cruz. I might be a college student right now, but I have always been a student in life and planning to continue learning.
                     I love learning everything and anything.
                     </p>
+                    {/*
+                    <h2>Values</h2>
+                    <br/>
+                    <div className="card-deck">
+                      <div className="card border-0" style={{ maxWidth: '250px'}}>
+                        <img src={require("../images/bg/lucid.jpg")} className="card-img-top" alt="..." />
+                        <div className="card-body">
+                          <h4 className="card-title text-center">Innovation</h4>
+                        </div>
+                      </div>
+                      <div className="card border-0" style={{ maxWidth: '250px'}}>
+                        <img src={require("../images/bg/lucid.jpg")} className="card-img-top" alt="..." />
+                        <div className="card-body">
+                          <h4 className="card-title text-center">Innovation</h4>
+                        </div>
+                      </div>
+                      <div className="card border-0" style={{ maxWidth: '250px'}}>
+                        <img src={require("../images/bg/lucid.jpg")} className="card-img-top" alt="..." />
+                        <div className="card-body">
+                          <h4 className="card-title text-center">Innovation</h4>
+                        </div>
+                      </div>
+                    </div>
+                    */}
+                    {/*
+                    <Carousel
+                      value={this.state.value}
+                      onChange={this.onChange}
+                      // slidesPerPage={ ( window.screen.width > 1325 ? ( this.state.is_hovering ? 1 : 2) : ( window.screen.width > 900 ? ( this.state.is_hovering ? 1 : 2 ) : 1 ) )}
+                      slidesPerPage={ 1 }
+                      infinite
+                      autoPlay={ 4000 }
+                      animationSpeed={1000}
+                    >
+                      <div style={{ width: "100%" }}>
+                      */}
+                        <h2>Career interests</h2>
+                        <br/>
+                        <div className="card-deck">
+                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto" }}>
+                            <img src={require("../images/bg/gregor-kopka-arm6.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
+                            <div className="card-body">
+                              <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Robotics</h4>
+                            </div>
+                          </div>
+                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                            <img src={require("../images/bg/sdc.png")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
+                            <div className="card-body">
+                              <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Self-driving vehicles</h4>
+                            </div>
+                          </div>
+                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                            <img src={require("../images/bg/manufacturing.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
+                            <div className="card-body">
+                              <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Manufacturing</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="card-deck">
+                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                            <img src={require("../images/bg/mining.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
+                            <div className="card-body">
+                              <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Mining</h4>
+                            </div>
+                          </div>
+                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                            <img src={require("../images/bg/lucid.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
+                            <div className="card-body">
+                              <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Electric Vehicles</h4>
+                            </div>
+                          </div>
+                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                            <img src={require("../images/bg/space2.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
+                            <div className="card-body">
+                              <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Space</h4>
+                            </div>
+                          </div>
+                        </div>
+                      {/*
+                      </div>
+
+                      <div style={{ width: "100%" }}>
+                        <h2>Values</h2>
+                        <br/>
+                        <div className="card-deck">
+                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                            <img src={require("../images/bg/mining.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
+                            <div className="card-body">
+                              <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Mining</h4>
+                            </div>
+                          </div>
+                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                            <img src={require("../images/bg/lucid.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
+                            <div className="card-body">
+                              <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Electric Vehicles</h4>
+                            </div>
+                          </div>
+                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                            <img src={require("../images/bg/space2.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
+                            <div className="card-body">
+                              <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Space</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Carousel>
+                    */}
                   </FadeIn>
               }
 
@@ -344,7 +450,7 @@ class Navbar extends React.Component {
               >
                 <div className="row no-gutters" style={{ height: "100%" }}>
                   <div className="col-md-4">
-                    <img src={"https://www.itl.cat/pngfile/big/312-3120458_silicon-valley.jpg"} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%" }} />
+                    <img src={require("../images/bg/8666949245_ce1e6918cd_b.jpg")} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%" }} />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
@@ -366,12 +472,12 @@ class Navbar extends React.Component {
               >
                 <div className="row no-gutters" style={{ height: "100%" }}>
                   <div className="col-md-4">
-                    <img src={"https://cdnb.artstation.com/p/assets/images/images/013/054/443/large/gregor-kopka-arm6.jpg?1537853559"} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
+                    <img src={require("../images/bg/gregor-kopka-arm6.jpg")} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
                   </div>
                   <div className="col-md-8" style={{ height: "100%"}}>
                     <div className="card-body">
                       <h6 className="card-text" style={{ fontWeight: "600" }}>Mechanical Engineering</h6>
-                      <p className="card-text">Mechatronics</p>
+                      <p className="card-text">Mechatronics, and reliability engineering</p>
                       <p className="card-text"></p>
                     </div>
 
@@ -388,12 +494,12 @@ class Navbar extends React.Component {
               >
                 <div className="row no-gutters" style={{ height: "100%" }}>
                   <div className="col-md-4">
-                    <img src={"https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f285681289af0e7316b841b%2F0x0.jpg"} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
+                    <img src={require("../images/bg/space.jpg")} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
                   </div>
                   <div className="col-md-8" style={{ height: "100%"}}>
                     <div className="card-body">
                       <h6 className="card-text" style={{ fontWeight: "600" }}>Entrepreneurship</h6>
-                      <p className="card-text">Built technology based companies</p>
+                      <p className="card-text">"The best way to predict the future is to create it"</p>
                     </div>
 
                       <ul className="list-group list-group-flush">
@@ -409,7 +515,7 @@ class Navbar extends React.Component {
               >
                 <div className="row no-gutters" style={{ height: "100%" }}>
                   <div className="col-md-4">
-                    <img src={require("../images/bg/surf.jpg")} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
+                    <img src={require("../images/bg/surf2.jpg")} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
                   </div>
                   <div className="col-md-8" style={{ height: "100%"}}>
                     <div className="card-body">
@@ -420,7 +526,22 @@ class Navbar extends React.Component {
                 </div>
               </div>
 
-
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "340px" : ( window.screen.width > 900 ? "340px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
+              onMouseEnter={() => this.changeHover(true)}
+              //onMouseLeave={() => this.changeHover(false)}
+              >
+                <div className="row no-gutters" style={{ height: "100%" }}>
+                  <div className="col-md-4">
+                    <img src={require("../images/bg/img_0728-sm_abovegranitelakes.jpg")} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
+                  </div>
+                  <div className="col-md-8" style={{ height: "100%"}}>
+                    <div className="card-body">
+                      <h6 className="card-text" style={{ fontWeight: "600" }}>Environment</h6>
+                      <p className="card-text">Big advocate in protecting the enviroment</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
 
               </Carousel>
@@ -476,7 +597,7 @@ class Navbar extends React.Component {
               <a href="https://stackoverflow.com/users/5487345/auriga?tab=profile">
                 <i className="fab fa-stack-overflow" style={{fontSize: '25px', paddingLeft: '15px', color: "#1ebc8c"}} />
               </a>
-              <a href="https://twitter.com/themaxadorable">
+              <a href="https://twitter.com/maxchakhmatov">
                 <i className="fab fa-twitter" style={{fontSize: '25px', color: "#1ebc8c" , paddingLeft: '15px' }} />
               </a>
             </div>

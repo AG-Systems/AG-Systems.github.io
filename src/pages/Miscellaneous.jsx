@@ -32,6 +32,8 @@ class Miscellaneous extends React.Component {
               "· Wrote documentation to assist new team members, and existing team members.",
               "· Overhauled entire internal wiki for organization.",
               "· In charge of onboarding new team members.",
+              "· Designed PCB for a brake light.",
+              "· Assisted on the brakes system, and battery management system in SolidWorks.",
             ],
             "tldr": "",
             "media": [],

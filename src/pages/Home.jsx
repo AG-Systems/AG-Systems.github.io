@@ -215,8 +215,8 @@ getExperience() {
           "sub_title": "ConfidentMindset",
           "location": "Bay Area, CA",
           "date_started": "Oct 2016",
-          "date_ended": "Dec 2016",
-          "total_length": "3 Months",
+          "date_ended": "Nov 2016",
+          "total_length": "1 Months",
           "img": require("../images/logos/no_logo.png"),
           "description": [
           ],
