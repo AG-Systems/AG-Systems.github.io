@@ -339,19 +339,19 @@ class Navbar extends React.Component {
                         <h2>Career interests</h2>
                         <br/>
                         <div className="card-deck">
-                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto" }}>
+                          <div className="card border-0 navbar-cards mb-3 bg-transparent" style={{ maxWidth: '250px', margin: "0 auto" }}>
                             <img src={require("../images/bg/gregor-kopka-arm6.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
                             <div className="card-body">
                               <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Robotics</h4>
                             </div>
                           </div>
-                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                          <div className="card border-0 navbar-cards mb-3 bg-transparent" style={{ maxWidth: '250px', margin: "0 auto"}}>
                             <img src={require("../images/bg/sdc.png")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
                             <div className="card-body">
                               <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Self-driving vehicles</h4>
                             </div>
                           </div>
-                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                          <div className="card border-0 navbar-cards mb-3 bg-transparent" style={{ maxWidth: '250px', margin: "0 auto"}}>
                             <img src={require("../images/bg/manufacturing.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
                             <div className="card-body">
                               <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Manufacturing</h4>
@@ -359,19 +359,19 @@ class Navbar extends React.Component {
                           </div>
                         </div>
                         <div className="card-deck">
-                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                          <div className="card border-0 navbar-cards mb-3 bg-transparent" style={{ maxWidth: '250px', margin: "0 auto"}}>
                             <img src={require("../images/bg/mining.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
                             <div className="card-body">
                               <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Mining</h4>
                             </div>
                           </div>
-                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                          <div className="card border-0 navbar-cards mb-3 bg-transparent" style={{ maxWidth: '250px', margin: "0 auto"}}>
                             <img src={require("../images/bg/lucid.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
                             <div className="card-body">
                               <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Electric Vehicles</h4>
                             </div>
                           </div>
-                          <div className="card border-0" style={{ maxWidth: '250px', margin: "0 auto"}}>
+                          <div className="card border-0 navbar-cards mb-3 bg-transparent" style={{ maxWidth: '250px', margin: "0 auto"}}>
                             <img src={require("../images/bg/space2.jpg")} className="card-img-top" alt="..." style={{ objectFit: "cover", height: "180px", width: "100%" }} />
                             <div className="card-body">
                               <h4 className="card-title text-center" style={{ fontSize: "1.3rem" }}>Space</h4>
