@@ -488,6 +488,30 @@ class Navbar extends React.Component {
                 </div>
               </div>
 
+              {/*
+              <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "340px" : ( window.screen.width > 900 ? "340px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)" }}
+              onMouseEnter={() => this.changeHover(true)}
+              //onMouseLeave={() => this.changeHover(false)}
+              >
+                <div className="row no-gutters" style={{ height: "100%" }}>
+                  <div className="col-md-4">
+                    <img src={require("../images/bg/gregor-kopka-arm6.jpg")} className="card-img" alt="..." style={{ objectFit: "cover", height: ( window.screen.width > 900 ? "100%" : "200px" ), width: "100%", backgroundPosition: "0% 0%" }} />
+                  </div>
+                  <div className="col-md-8" style={{ height: "100%"}}>
+                    <div className="card-body">
+                      <h6 className="card-text" style={{ fontWeight: "600" }}>Electrical Engineering</h6>
+                      <p className="card-text">Schematic design and PCB design.</p>
+                      <p className="card-text"></p>
+                    </div>
+
+                      <ul className="list-group list-group-flush">
+
+                      </ul>
+                  </div>
+                </div>
+              </div>
+              */}
+              
               <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "340px" : ( window.screen.width > 900 ? "340px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
               onMouseEnter={() => this.changeHover(true)}
               //onMouseLeave={() => this.changeHover(false)}

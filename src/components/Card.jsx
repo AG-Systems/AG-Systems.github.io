@@ -113,30 +113,28 @@ class Card extends React.Component {
               description_content.push(<div style={{ width: "100%", height: "15px" }}></div>);
 
               return (
-                <div className="media mt-5" key={ hash("desktop-" + exp.date_ended + index + Math.floor(Math.random() * Math.floor(1000))) + exp.index }>
+                <div className={ exp.minimized ? "media mt-1" : "media mt-5" } key={ hash("desktop-" + exp.date_ended + index + Math.floor(Math.random() * Math.floor(1000))) + exp.index }>
                   <img src={ exp.img } className="mr-3 d-none d-lg-block" height="56" width="56" alt="..." />
                   <img src={ exp.img } className="mr-3 d-lg-none" alt="..." height="45" width="45" />
-                  <div className="media-body border-bottom d-none d-lg-block">
+                  <div className={ exp.hide_bottom_bar ? "media-body d-none d-lg-block" : "media-body border-bottom d-none d-lg-block"}>
                     <h3 className="mt-0" style={{ fontSize: "1.2rem" }}>{ exp.title }</h3>
                     <p style={{ fontFamily: "Titillium Web", marginBottom: "0px" }}>
                         <span className="card-sub" style={{ fontWeight: "400" }}>{ exp.sub_title }</span>
                         <br/>
-                        { date_element }
+                        <span hidden={exp.date_started === ""}> { date_element } </span>
                         <br/>
                         <span className="card-location" style={{ color: props.dark_mode_props ? "rgba(226, 226, 226, 0.6)" : "rgba(0, 0, 0, 0.6)" }}> { exp.location } </span>
                     </p>
                     <span>
                       { description_content }
                     </span>
-                    <div hidden={ (props.extra_html && props.extra_html !== "") ? true : false }>
-                    </div>
                   </div>
-                  <div className="media-body border-bottom d-lg-none">
+                  <div className={ exp.hide_bottom_bar ? "media-body d-lg-none" : "media-body border-bottom d-lg-none"}>
                     <h3 className="mt-0 dark-mode-card-title" style={{ fontSize: "16px", fontWeight: "600" }}>{ exp.title }</h3>
                     <p style={{ fontFamily: "Titillium Web" }}>
                         <span className="card-sub" style={{ fontWeight: 400, fontSize: "14px" }}>{ exp.sub_title }</span>
                         <br/>
-                        { date_element }
+                        <span  hidden={exp.date_started === ""}>{ date_element } </span>
                         <br/>
                         <span className="card-location" style={{ fontSize: "13px", fontWeight: 500, color: props.dark_mode_props ? "rgba(226, 226, 226, 0.6)" : "rgba(0, 0, 0, 0.6)" }}> { exp.location } </span>
                     </p>

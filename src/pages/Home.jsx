@@ -28,6 +28,75 @@ class Home extends React.Component {
 getExperience() {
   return [
         {
+          "title": "Mechanical Engineer Intern",
+          "sub_title": "Barrick Gold Corporation",
+          "location": "Elko, NV",
+          "date_started": "Jun 2021",
+          "date_ended": "Present",
+          "total_length": "0",
+          "img": require("../images/logos/barrick.jfif"),
+          "description": [
+            "• Reliability Engineering.",
+            "• Interning at one of the world's largest gold mining company.",
+            "My internship is for Nevada Gold Mines which means I technically work for Barrick and with Newmont.",
+            "Since Nevada Gold Mines is a joint venture between Barrick and Newmont."
+
+          ],
+          "tldr": "",
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": true
+        },
+        {
+          "title": "",
+          "sub_title": "Newmont Corporation",
+          "location": "",
+          "date_started": "",
+          "date_ended": "",
+          "total_length": "0",
+          "img": require("../images/logos/newmont.jfif"),
+          "description": [
+          ],
+          "tldr": "",
+          "media": [],
+          "minimized": true,
+          "hide_bottom_bar": true
+        },
+        {
+          "title": "",
+          "sub_title": "Nevada Gold Mines",
+          "location": "",
+          "date_started": "",
+          "date_ended": "",
+          "total_length": "0",
+          "img": require("../images/logos/nevada.png"),
+          "description": [
+          ],
+          "tldr": "",
+          "media": [],
+          "minimized": true,
+          "hide_bottom_bar": false
+        },
+        {
+          "title": "App Developer (contractor)",
+          "sub_title": "The Lambda Group",
+          "location": "Remote",
+          "date_started": "Feb 2021",
+          "date_ended": "June 2021",
+          "total_length": "5 Months",
+          "img": require("../images/logos/lambda.jfif"),
+          "description": [
+            "• Built mobile app using Flutter and Dart with 6 other people.",
+            "• Integrated GraphQL with mobile app and backend API.",
+            "• Wrote and performed unit testing, integration testing, and widget testing.",
+            "• Mobile app was built for: Graham Stephen & Financial Education.",
+          ],
+          "tldr": "",
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
+        },
+        {
           "title": "Frontend Engineer Intern",
           "sub_title": "Walmart eCommerce",
           "location": "Sunnyvale, CA",
@@ -36,27 +105,32 @@ getExperience() {
           "total_length": "3 Months",
           "img": require("../images/logos/walmart.jfif"),
           "description": [
-            "• Built mobile app using React Native (Typescript, and Redux) for internal testing",
-            "• Built an UI component sharing library for other teams to use with JavaScript (with React)",
-            "• UI component sharing library is highly optimized for speed, and bundle size (30%+ more efficient)",
-            "• Tech stack used: React.js, React-native, Redux (state management), typescript, ES6 JavaScript",
+            "• Built mobile app using React Native (Typescript, and Redux) for internal testing.",
+            "• Built an UI component sharing library for other teams to use with JavaScript (with React).",
+            "• UI component sharing library is highly optimized for speed, and bundle size (30%+ more efficient).",
+            "• Tech stack used: React.js, React-native, Redux (state management), typescript, ES6 JavaScript.",
+            "• I technically worked for both, Walmart eCommerce and Walmart labs (now is called Global Tech)."
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": true
         },
         {
-          "title": "Engineering Intern",
+          "title": "",
           "sub_title": "Walmart Labs",
-          "location": "San Bruno, CA",
-          "date_started": "Jun 2020",
-          "date_ended": "Aug 2020",
-          "total_length": "3 Months",
+          "location": "",
+          "date_started": "",
+          "date_ended": "",
+          "total_length": "",
           "img": require("../images/logos/walmartlabs.png"),
           "description": [
-            "• I technically work for both, Walmart eCommerce and Walmart labs (now is called Global Tech)",
+
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": true,
+          "hide_bottom_bar": false
         },
         {
           "title": "Physics Teacher Assistant",
@@ -67,14 +141,16 @@ getExperience() {
           "total_length": "3 Months",
           "img": require("../images/logos/foothill.png"),
           "description": [
-            "• Class: Physics 4B (Electricity & Magnetism)",
-            "• Hosted office hours to assist students on their homework",
-            "• Used LaTeX to create a formula sheet for students",
-            "• 6-week summer session",
-            "• Professor: Max Yuen"
+            "• Class: Physics 4B (Electricity & Magnetism).",
+            "• Hosted office hours to assist students on their homework.",
+            "• Used LaTeX to create a formula sheet for students.",
+            "• 6-week summer session.",
+            "• Professor: Max Yuen."
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Software Developer",
@@ -85,16 +161,18 @@ getExperience() {
           "total_length": "9 Months",
           "img": require("../images/logos/quesgen.png"),
           "description": [
-            "• Built internal full-fledged mobile app with flutter, redux, and dart",
-            "• Features proper full-fledged state management, authentication, security, and high performance",
-            "• Wrote and performed unit testing, integration testing, and widget testing for mobile app",
-            "• Fixed bugs, built features and improved the overall experience of QuesGen dashboard",
-            "• Integrated end to end testing with selenium with python and CircleCI (Continuous integration)",
-            "• Found and fixed security vulnerabilities",
-            "• Tech stack used: Flutter, Dart, Redux (state management),Python, Selenium, PHP, SQL, and Hack"
+            "• Built internal full-fledged mobile app with flutter, redux, and dart.",
+            "• Features proper full-fledged state management, authentication, security, and high performance.",
+            "• Wrote and performed unit testing, integration testing, and widget testing for mobile app.",
+            "• Fixed bugs, built features and improved the overall experience of QuesGen dashboard.",
+            "• Integrated end to end testing with selenium with python and CircleCI (Continuous integration).",
+            "• Found and fixed security vulnerabilities.",
+            "• Tech stack used: Flutter, Dart, Redux (state management),Python, Selenium, PHP, SQL, and Hack."
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Mathematics Tutor",
@@ -105,10 +183,12 @@ getExperience() {
           "total_length": "4 Months",
           "img": require("../images/logos/foothill.png"),
           "description": [
-            "• Tutored Precalculus (MATH 48A) for pass the torch program"
+            "• Tutored Precalculus (MATH 48A) for pass the torch program."
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Programming Tutor",
@@ -119,11 +199,13 @@ getExperience() {
           "total_length": "5 Months",
           "img": require("../images/logos/no_logo.png"),
           "description": [
-            "• Taught the basics of programming for various high school students",
-            "• Languages taught: Python, Java, and HTML / CSS / JS"
+            "• Taught the basics of programming for various high school students.",
+            "• Languages taught: Python, Java, and HTML / CSS / JS."
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Founder",
@@ -135,12 +217,14 @@ getExperience() {
           "img": require("../images/logos/chronoci.jpg"),
           "description": [
             "• Built a platform for testing web applications for security vulnerabilities.",
-            "• 4 daily users (minimum), & 70 total users",
-            "• Pitched to Sequoia Capital",
+            "• 4 daily users (minimum), & 70 total users.",
+            "• Pitched to Sequoia Capital.",
             "• Technologies: React, Redux, Webpack, Ruby on Rails, GraphQL, Apollo, Docker, Docker-compose, Google Kubernetes Engine, Python, Flask, Stripe api, GitHub api, GitLab api, Bitbucket api, MongoDB, Redis, PostgreSQL"
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Software Engineer Intern",
@@ -151,14 +235,16 @@ getExperience() {
           "total_length": "4 Months",
           "img": require("../images/logos/mindsight.png"),
           "description": [
-            "• Created unit and end to end tests for the dashboard with Jest, and Cypress",
-            "• Drastically redesigned the dashboard with Vue.js, Vue-router, Bulma, Webpack, and Apollo",
-            "• Completely redesigned landing page with Vue.js, Vue-router, & Bootstrap",
-            "• Implemented a feature where users can compare past code commits and current code commits with Apollo, Graphql, and InfluxDB",
-            "• Tech stack: Vue.js, Vue-router, Bulma, Webpack, Graphql, Apollo, Golang, PostgreSQL, auth0, and InfluxDB"
+            "• Created unit and end to end tests for the dashboard with Jest, and Cypress.",
+            "• Drastically redesigned the dashboard with Vue.js, Vue-router, Bulma, Webpack, and Apollo.",
+            "• Completely redesigned landing page with Vue.js, Vue-router, & Bootstrap.",
+            "• Implemented a feature where users can compare past code commits and current code commits with Apollo, Graphql, and InfluxDB.",
+            "• Tech stack: Vue.js, Vue-router, Bulma, Webpack, Graphql, Apollo, Golang, PostgreSQL, auth0, and InfluxDB."
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Volunteer",
@@ -171,7 +257,9 @@ getExperience() {
           "description": [
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Software Engineer Intern",
@@ -184,13 +272,15 @@ getExperience() {
           "description": [
             "• Completely redesigned user interface with React.",
             "• Made improvements to user experience such as increasing site load speed by optimizing code.",
-            "• Created an internal tool with Python that parses emails from Gmail API and inserts into Hubspot database",
-            "• Built a Chrome extension using Webpack, React, internal API, and Hubspot API",
-            "• Chrome extension features automatic audio note-taking that automatically sends to Hubspot",
+            "• Created an internal tool with Python that parses emails from Gmail API and inserts into Hubspot database.",
+            "• Built a Chrome extension using Webpack, React, internal API, and Hubspot API.",
+            "• Chrome extension features automatic audio note-taking that automatically sends to Hubspot.",
             "• Tech stack: Meteor.js, React, React-Router, Webpack, Graphql, Apollo, MongoDB, Hubspot API, Gmail API"
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Founder",
@@ -202,13 +292,15 @@ getExperience() {
           "img": require("../images/logos/no_logo.png"),
           "description": [
             "• Attempted to build a service for businesses to evaluate the effectiveness of online advertisements.",
-            "• Implemented a conventional neural network which was trained off good and bad advertisements",
-            "• Hosted on Google compute engine using apache2, and passenger. Images are stored securely on Amazon S3",
+            "• Implemented a conventional neural network which was trained off good and bad advertisements.",
+            "• Hosted on Google compute engine using apache2, and passenger. Images are stored securely on Amazon S3.",
             "• Built using Ruby on Rails for user registration. Includes ad uploading, HTTPS security, and payment subscription system.",
-            "• Tech stack: Tensorflow, TFLearn, Sklearn, Python, Ruby on Rails, Stripe api, Google Compute Engine, Amazon S3, and React.js"
+            "• Tech stack: Tensorflow, TFLearn, Sklearn, Python, Ruby on Rails, Stripe api, Google Compute Engine, Amazon S3, and React.js."
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Founder",
@@ -221,7 +313,9 @@ getExperience() {
           "description": [
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Programming Instructor",
@@ -233,12 +327,14 @@ getExperience() {
           "img": require("../images/logos/thecoderschool.png"),
           "description": [
             "• Taught kids ages 7 to 15 coding skills through project-based learning.",
-            "• Languages taught range from beginner level like Scratch to more advanced like JavaScript,Python and Ruby",
-            "• Advance students learned basics of Ruby on Rails, Meteor.js, React, & ReactNative",
-            "• API’s taught: YouTube api, Google maps api and Coinmarketcap api"
+            "• Languages taught range from beginner level like Scratch to more advanced like JavaScript,Python and Ruby.",
+            "• Advance students learned basics of Ruby on Rails, Meteor.js, React, & ReactNative.",
+            "• API’s taught: YouTube api, Google maps api and Coinmarketcap API."
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
         {
           "title": "Assistant",
@@ -252,7 +348,9 @@ getExperience() {
               "• Helped packing boxes, and program units"
           ],
           "tldr": "",
-          "media": []
+          "media": [],
+          "minimized": false,
+          "hide_bottom_bar": false
         },
       ];
   }

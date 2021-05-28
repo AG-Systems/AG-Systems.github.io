@@ -37,6 +37,7 @@ class Education extends React.Component {
               "· Electrical Computer Engineering 10 - Robot Dynamics",
               "· Electrical Computer Engineering 101/L - Introduction to Electronic Circuits",
               "· Electrical Computer Engineering 103/L - Signals and Systems",
+              "· Electrical Computer Engineering 171/L - Analog Electronics",
               "General Education: ",
               "· Feminist Studies 14 - Popular Culture in South Asia",
               "· Ocean Sciences 90 - Fundamentals of Climate"
