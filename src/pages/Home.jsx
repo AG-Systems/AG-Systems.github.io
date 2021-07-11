@@ -38,8 +38,10 @@ getExperience() {
           "description": [
             "• Reliability Engineering.",
             "• Interning at one of the world's largest gold mining company.",
-            "My internship is for Nevada Gold Mines which means I technically work for Barrick and with Newmont.",
-            "Since Nevada Gold Mines is a joint venture between Barrick and Newmont."
+            "More infomation: ",
+            "• Nevada Gold Mines is a joint venture between Barrick Gold Corporation (61.5%) and Newmont Goldcorp Corporation (38.5%).",
+            "• Worked at the Carlin @ gold quarry mine site.",
+            "• MSHA certifed."
 
           ],
           "tldr": "",
@@ -109,6 +111,8 @@ getExperience() {
             "• Built an UI component sharing library for other teams to use with JavaScript (with React).",
             "• UI component sharing library is highly optimized for speed, and bundle size (30%+ more efficient).",
             "• Tech stack used: React.js, React-native, Redux (state management), typescript, ES6 JavaScript.",
+            "More infomation: ",
+            "• Ninety percent of Americans live within 10 miles of a Walmart store.",
             "• I technically worked for both, Walmart eCommerce and Walmart labs (now is called Global Tech)."
           ],
           "tldr": "",

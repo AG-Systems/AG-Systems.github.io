@@ -38,6 +38,7 @@ ReactDOM.render(
               <Redirect from='/index.html' to="/" />
               {/* <Route exact path="/skills" render={(props) => <Skills {...props} /> } /> */}
               {/* <Route exact path="/more" render={(props) => <More {...props} /> } /> */}
+              <Route exact path="/*" render={(props) => <Footer {...props} /> } />
 
           </div>
           {/* <Route exact path="/*" render={(props) => <Footer {...props} /> } /> */}

@@ -409,10 +409,12 @@ class Navbar extends React.Component {
                     */}
                   </FadeIn>
               }
-
-
-              <br/>
+              <FadeIn delay={500}>
+                <h2>Highlights</h2>
+              </FadeIn>
+              {/* <br/> */}
               <div className="d-none d-lg-block mb-5"></div>
+
               <Carousel
                 value={this.state.value}
                 onChange={this.onChange}
@@ -511,7 +513,7 @@ class Navbar extends React.Component {
                 </div>
               </div>
               */}
-              
+
               <div className="card mr-3 ml-3 mb-5 border-0 navbar-cards" style={{maxWidth: '98%', height: ( window.screen.width > 1325 ? "340px" : ( window.screen.width > 900 ? "340px" : "510px" ) ), minheight: "300px", boxShadow: "0 0.6rem 1rem rgb(0 0 0 / 15%)"}}
               onMouseEnter={() => this.changeHover(true)}
               //onMouseLeave={() => this.changeHover(false)}
